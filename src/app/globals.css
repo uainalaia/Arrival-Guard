@@ -1,0 +1,79 @@
+@import "tailwindcss";
+@import "../ui/theme/tokens.css";
+@import "../ui/theme/motion.css";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme inline {
+  --color-paper: var(--ag-paper);
+  --color-surface: var(--ag-surface);
+  --color-ink: var(--ag-ink);
+  --color-ink-2: var(--ag-ink-2);
+  --color-muted: var(--ag-muted);
+  --color-line: var(--ag-line);
+  --color-line-strong: var(--ag-line-strong);
+  --color-route: var(--ag-route);
+  --color-route-tint: var(--ag-route-tint);
+  --color-route-hover: var(--ag-route-hover);
+  --color-on-route: var(--ag-on-route);
+  --color-arrive: var(--ag-arrive);
+  --color-arrive-tint: var(--ag-arrive-tint);
+  --color-wait: var(--ag-wait);
+  --color-wait-tint: var(--ag-wait-tint);
+  --color-stop: var(--ag-stop);
+  --color-stop-tint: var(--ag-stop-tint);
+  --color-seal: var(--ag-seal);
+
+  --font-sans: var(--font-overpass), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-source-serif), ui-serif, Georgia, serif;
+  --font-mono: var(--font-overpass-mono), ui-monospace, monospace;
+
+  --radius-doc: 2px;
+  --radius-control: 8px;
+  --radius-panel: 14px;
+
+  --shadow-float: var(--ag-shadow-float);
+  --ease-standard: var(--ag-ease-standard);
+  --ease-exit: var(--ag-ease-exit);
+
+  /* Movimiento de marca (motion.css): utilidades duration-fast|base|slow y animate-ag-*; todo transition-* sin
+     valores explícitos usa la duración y la curva de la marca. */
+  --transition-duration-fast: var(--ag-dur-fast);
+  --transition-duration-base: var(--ag-dur-base);
+  --transition-duration-slow: var(--ag-dur-slow);
+  --default-transition-duration: var(--ag-dur-fast);
+  --default-transition-timing-function: var(--ag-ease-standard);
+  --animate-ag-fade-in: ag-fade-in var(--ag-dur-fast) var(--ag-ease-standard) both;
+  --animate-ag-fade-in-base: ag-fade-in var(--ag-dur-base) var(--ag-ease-standard) both;
+  --animate-ag-rise-in: ag-rise-in var(--ag-dur-base) var(--ag-ease-standard) both;
+  --animate-ag-scale-in: ag-scale-in var(--ag-dur-fast) var(--ag-ease-standard) both;
+  --animate-ag-sheet-in: ag-sheet-in var(--ag-dur-base) var(--ag-ease-standard) both;
+  --animate-ag-collapse-open: ag-collapse-open var(--ag-dur-base) var(--ag-ease-standard) both;
+  --animate-ag-fade-out: ag-fade-out var(--ag-dur-fast) var(--ag-ease-exit) both;
+  --animate-ag-scale-out: ag-scale-out var(--ag-dur-fast) var(--ag-ease-exit) both;
+  --animate-ag-sheet-out: ag-sheet-out var(--ag-dur-fast) var(--ag-ease-exit) both;
+  --animate-ag-collapse-close: ag-collapse-close var(--ag-dur-fast) var(--ag-ease-exit) both;
+}
+
+html {
+  background: var(--ag-paper);
+  color: var(--ag-ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 26px;
+}
+
+/* Cifras tabulares para todo número de dinero (UI_UX 6.3). */
+.tabular {
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ag-route);
+  outline-offset: 2px;
+}
+
+/* Movimiento reducido e impresión: ver ../ui/theme/motion.css. */

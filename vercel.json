@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "installCommand": "npm install -g pnpm@12.14.0 && pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm db:migrate && pnpm build",
+  "regions": [
+    "iad1"
+  ]
+}

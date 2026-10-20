@@ -1,0 +1,4 @@
+# Paquetes cuyos scripts de instalación se permiten (binarios nativos de esbuild y del resolver de ESLint).
+allowBuilds:
+  esbuild: true
+  unrs-resolver: true

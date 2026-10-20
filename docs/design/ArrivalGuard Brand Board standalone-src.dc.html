@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<meta name="ext-resource-dependency" content="https://unpkg.com/lucide-static@0.469.0/icons/circle-dashed.svg" data-resource-id="ic_circle_dashed">
+<meta name="ext-resource-dependency" content="https://unpkg.com/lucide-static@0.469.0/icons/route.svg" data-resource-id="ic_route">
+<meta name="ext-resource-dependency" content="https://unpkg.com/lucide-static@0.469.0/icons/hourglass.svg" data-resource-id="ic_hourglass">
+<meta name="ext-resource-dependency" content="https://unpkg.com/lucide-static@0.469.0/icons/send.svg" data-resource-id="ic_send">
+<meta name="ext-resource-dependency" content="https://unpkg.com/lucide-static@0.469.0/icons/refresh-cw.svg" data-resource-id="ic_refresh_cw">
+<meta name="ext-resource-dependency" content="https://unpkg.com/lucide-static@0.469.0/icons/check-check.svg" data-resource-id="ic_check_check">
+<meta name="ext-resource-dependency" content="https://unpkg.com/lucide-static@0.469.0/icons/landmark.svg" data-resource-id="ic_landmark">
+<meta name="ext-resource-dependency" content="https://unpkg.com/lucide-static@0.469.0/icons/badge-check.svg" data-resource-id="ic_badge_check">
+<meta name="ext-resource-dependency" content="https://unpkg.com/lucide-static@0.469.0/icons/circle-slash.svg" data-resource-id="ic_circle_slash">
+<meta name="ext-resource-dependency" content="https://unpkg.com/lucide-static@0.469.0/icons/undo-2.svg" data-resource-id="ic_undo_2">
+<meta name="ext-resource-dependency" content="https://unpkg.com/lucide-static@0.469.0/icons/file-text.svg" data-resource-id="ic_file_text">
+<meta name="ext-resource-dependency" content="https://unpkg.com/lucide-static@0.469.0/icons/triangle-alert.svg" data-resource-id="ic_triangle_alert">
+<meta name="ext-resource-dependency" content="https://unpkg.com/lucide-static@0.469.0/icons/clock.svg" data-resource-id="ic_clock">
+<meta name="ext-resource-dependency" content="https://unpkg.com/lucide-static@0.469.0/icons/download.svg" data-resource-id="ic_download">
+<meta name="ext-resource-dependency" content="https://unpkg.com/lucide-static@0.469.0/icons/chevron-down.svg" data-resource-id="ic_chevron_down">
+<meta name="ext-resource-dependency" content="https://unpkg.com/lucide-static@0.469.0/icons/x.svg" data-resource-id="ic_x">
+<template id="__bundler_thumbnail" data-bg-color="#F1F3F2"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g transform="translate(8 8) scale(0.5)"><path d="M8 28 V15 A8 8 0 0 1 24 15 V28" fill="none" stroke="#172231" stroke-width="4"/><line x1="2" y1="28" x2="30" y2="28" stroke="#172231" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="21" r="3.25" fill="#2346C8"/></g></svg></template>
+</head>
+<body>
+<x-dc>
+<helmet><meta name="design_doc_mode" content="canvas"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;500;600;700&amp;family=Overpass+Mono:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&amp;display=swap" rel="stylesheet"><style>body{margin:0;background:#DFE3E1;font-family:Overpass,system-ui,sans-serif;color:#172231;-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums lining-nums}a{color:#2346C8;text-underline-offset:3px}a:hover{color:#1A379F}*{box-sizing:border-box}</style></helmet>
+<svg width="0" height="0" style="position:absolute"><defs><filter id="agInk" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="7" result="n"></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="0.9" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap></filter></defs></svg>
+
+<div data-screen-label="Brand board" style="width:1600px;background:#F1F3F2;margin:0 auto">
+
+<header style="padding:72px 72px 64px;border-bottom:1px solid #D5DAD7;display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:end">
+  <div style="display:flex;flex-direction:column;gap:40px">
+    <div style="white-space:nowrap;line-height:1;font-size:46px;font-weight:700;letter-spacing:-0.01em;color:#172231"><svg width="64" height="64" viewBox="0 0 32 32" style="vertical-align:-8px;margin-right:24px"><path d="M8 28 V15 A8 8 0 0 1 24 15 V28" style="fill:none;stroke:#172231;stroke-width:4"></path><line x1="2" y1="28" x2="30" y2="28" style="stroke:#172231;stroke-width:2;stroke-linecap:round"></line><circle cx="16" cy="21" r="3.25" style="fill:#2346C8"></circle></svg>ArrivalGuard</div>
+    <h1 style="margin:0;font-size:56px;line-height:60px;font-weight:700;letter-spacing:-0.02em;max-width:820px">Tuition that arrives. Savings that stay.</h1>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:22px;color:#4A5566">
+    <div style="font-size:20px;line-height:26px;font-weight:600;color:#172231;letter-spacing:-0.005em">Brand and design system</div>
+    <div>Wayfinding for money in transit. A tuition payment leaves Lima, crosses currencies and intermediaries, and has to arrive at a university in Shenzhen. The interface borrows the language of transit signage so a family under pressure always knows where the money is and what comes next.</div>
+    <div style="color:#646D79;font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.01em">FinTechathon 2026 International Track. Version 1.0, Oct 2026</div>
+  </div>
+</header>
+
+<div style="display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid #D5DAD7">
+  <div style="padding:32px 32px 32px 72px;border-right:1px solid #D5DAD7;display:flex;flex-direction:column;gap:8px"><div style="font-size:20px;line-height:26px;font-weight:600">Legible</div><div style="font-size:14px;line-height:22px;color:#4A5566">Clear hierarchy, tabular numbers, one state per element, the user's own language.</div></div>
+  <div style="padding:32px;border-right:1px solid #D5DAD7;display:flex;flex-direction:column;gap:8px"><div style="font-size:20px;line-height:26px;font-weight:600">Binding</div><div style="font-size:14px;line-height:22px;color:#4A5566">Consent shows exactly what it covers and leaves a visible mark.</div></div>
+  <div style="padding:32px;border-right:1px solid #D5DAD7;display:flex;flex-direction:column;gap:8px"><div style="font-size:20px;line-height:26px;font-weight:600">Calm under uncertainty</div><div style="font-size:14px;line-height:22px;color:#4A5566">"We don't know yet" is shown calmly with the next step, never as an error or a success.</div></div>
+  <div style="padding:32px 72px 32px 32px;display:flex;flex-direction:column;gap:8px"><div style="font-size:20px;line-height:26px;font-weight:600">Honest</div><div style="font-size:14px;line-height:22px;color:#4A5566">The simulation is always visible and the system's limits are named.</div></div>
+</div>
+
+<section data-screen-label="Threshold mark" style="padding:64px 72px;border-bottom:1px solid #D5DAD7;display:grid;grid-template-columns:280px 1fr;gap:48px">
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <h2 style="margin:0;font-size:26px;line-height:32px;font-weight:600;letter-spacing:-0.01em">The Threshold mark</h2>
+    <p style="margin:0;font-size:14px;line-height:22px;color:#4A5566;text-wrap:pretty">An arched doorway on a threshold, with a dot that has already passed through: the payment that arrived and was kept safe. The arch also reads as the A of Arrival. Built on a 32 × 32 grid.</p>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:24px">
+    <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:24px">
+      <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:24px">
+        <div style="font-size:13px;line-height:18px;font-weight:600;letter-spacing:0.005em;color:#4A5566">Mark sizes, legible from 20 to 112 px</div>
+        <div style="display:flex;align-items:flex-end;gap:48px">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px"><svg width="20" height="20" viewBox="0 0 32 32"><path d="M8 28 V15 A8 8 0 0 1 24 15 V28" style="fill:none;stroke:#172231;stroke-width:4"></path><line x1="2" y1="28" x2="30" y2="28" style="stroke:#172231;stroke-width:2;stroke-linecap:round"></line><circle cx="16" cy="21" r="3.25" style="fill:#2346C8"></circle></svg><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">20 px, minimum</span></div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px"><svg width="32" height="32" viewBox="0 0 32 32"><path d="M8 28 V15 A8 8 0 0 1 24 15 V28" style="fill:none;stroke:#172231;stroke-width:4"></path><line x1="2" y1="28" x2="30" y2="28" style="stroke:#172231;stroke-width:2;stroke-linecap:round"></line><circle cx="16" cy="21" r="3.25" style="fill:#2346C8"></circle></svg><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">32 px</span></div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px"><svg width="48" height="48" viewBox="0 0 32 32"><path d="M8 28 V15 A8 8 0 0 1 24 15 V28" style="fill:none;stroke:#172231;stroke-width:4"></path><line x1="2" y1="28" x2="30" y2="28" style="stroke:#172231;stroke-width:2;stroke-linecap:round"></line><circle cx="16" cy="21" r="3.25" style="fill:#2346C8"></circle></svg><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">48 px</span></div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px"><svg width="112" height="112" viewBox="0 0 32 32"><path d="M8 28 V15 A8 8 0 0 1 24 15 V28" style="fill:none;stroke:#172231;stroke-width:4"></path><line x1="2" y1="28" x2="30" y2="28" style="stroke:#172231;stroke-width:2;stroke-linecap:round"></line><circle cx="16" cy="21" r="3.25" style="fill:#2346C8"></circle></svg><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">112 px</span></div>
+        </div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:20px">
+        <div style="font-size:13px;line-height:18px;font-weight:600;letter-spacing:0.005em;color:#4A5566">Clear space, half the mark height</div>
+        <div style="display:flex;align-items:center;justify-content:center;flex:1">
+          <div style="position:relative;padding:32px;border:1px dashed #7D8794;background:repeating-linear-gradient(45deg,#F1F3F2 0 6px,#FFFFFF 6px 12px)">
+            <div style="background:#FFFFFF"><svg width="64" height="64" viewBox="0 0 32 32" style="display:block"><path d="M8 28 V15 A8 8 0 0 1 24 15 V28" style="fill:none;stroke:#172231;stroke-width:4"></path><line x1="2" y1="28" x2="30" y2="28" style="stroke:#172231;stroke-width:2;stroke-linecap:round"></line><circle cx="16" cy="21" r="3.25" style="fill:#2346C8"></circle></svg></div>
+            <span style="position:absolute;top:8px;left:50%;transform:translateX(-50%);font-size:12px;line-height:16px;font-weight:500;color:#646D79">½ h</span>
+            <span style="position:absolute;left:6px;top:50%;transform:translateY(-50%);font-size:12px;line-height:16px;font-weight:500;color:#646D79">½ h</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:24px">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="height:160px;background:#FFFFFF;border:1px solid #D5DAD7;border-radius:14px;display:flex;align-items:center;justify-content:center"><div style="white-space:nowrap;line-height:1;font-size:29px;font-weight:700;letter-spacing:-0.01em;color:#172231"><svg width="40" height="40" viewBox="0 0 32 32" style="vertical-align:-5px;margin-right:15px"><path d="M8 28 V15 A8 8 0 0 1 24 15 V28" style="fill:none;stroke:#172231;stroke-width:4"></path><line x1="2" y1="28" x2="30" y2="28" style="stroke:#172231;stroke-width:2;stroke-linecap:round"></line><circle cx="16" cy="21" r="3.25" style="fill:#2346C8"></circle></svg>ArrivalGuard</div></div>
+        <div style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Horizontal lockup. Gap 0.375 × mark height, name on the threshold baseline. Minimum 96 px wide.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="height:160px;background:#FFFFFF;border:1px solid #D5DAD7;border-radius:14px;display:flex;align-items:center;justify-content:center"><svg width="56" height="56" viewBox="0 0 32 32"><path d="M8 28 V15 A8 8 0 0 1 24 15 V28" style="fill:none;stroke:#172231;stroke-width:4"></path><line x1="2" y1="28" x2="30" y2="28" style="stroke:#172231;stroke-width:2;stroke-linecap:round"></line><circle cx="16" cy="21" r="3.25" style="fill:#2346C8"></circle></svg></div>
+        <div style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Mark only</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="height:160px;background:#F1F3F2;border:1px solid #D5DAD7;border-radius:14px;display:flex;align-items:center;justify-content:center"><div style="white-space:nowrap;line-height:1;font-size:20px;font-weight:700;letter-spacing:-0.01em;color:#172231"><svg width="28" height="28" viewBox="0 0 32 32" style="vertical-align:-3.5px;margin-right:10.5px"><path d="M8 28 V15 A8 8 0 0 1 24 15 V28" style="fill:none;stroke:#172231;stroke-width:4"></path><line x1="2" y1="28" x2="30" y2="28" style="stroke:#172231;stroke-width:2;stroke-linecap:round"></line><circle cx="16" cy="21" r="3.25" style="fill:#172231"></circle></svg>ArrivalGuard</div></div>
+        <div style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">One color, ink</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="height:160px;background:#0E1521;border-radius:14px;display:flex;align-items:center;justify-content:center"><div style="white-space:nowrap;line-height:1;font-size:20px;font-weight:700;letter-spacing:-0.01em;color:#F1F3F2"><svg width="28" height="28" viewBox="0 0 32 32" style="vertical-align:-3.5px;margin-right:10.5px"><path d="M8 28 V15 A8 8 0 0 1 24 15 V28" style="fill:none;stroke:#F1F3F2;stroke-width:4"></path><line x1="2" y1="28" x2="30" y2="28" style="stroke:#F1F3F2;stroke-width:2;stroke-linecap:round"></line><circle cx="16" cy="21" r="3.25" style="fill:#F1F3F2"></circle></svg>ArrivalGuard</div></div>
+        <div style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">One color, paper on dark</div>
+      </div>
+    </div>
+    <div style="font-size:14px;line-height:22px;color:#4A5566">Wordmark in Overpass Bold, tracking −1%, all ink. No rotation, shadows, gradients or outlines. It must never read as a padlock, a shield or a map pin.</div>
+  </div>
+</section>
+
+<section data-screen-label="Consent seal" style="padding:64px 72px;border-bottom:1px solid #D5DAD7;display:grid;grid-template-columns:280px 1fr;gap:48px">
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <h2 style="margin:0;font-size:26px;line-height:32px;font-weight:600;letter-spacing:-0.01em">The consent seal</h2>
+    <p style="margin:0;font-size:14px;line-height:22px;color:#4A5566;text-wrap:pretty">When Carlos approves, the document receives a square seal generated from the fingerprint of that exact approval. Change one detail of the plan and the fingerprint, and the seal, change with it.</p>
+    <p style="margin:0;font-size:14px;line-height:22px;color:#4A5566;text-wrap:pretty">Appears only on the approval document, the Approved station of the journey, Carlos's requests and the evidence timeline.</p>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:24px">
+    <div style="display:grid;grid-template-columns:1fr 1fr 280px;gap:24px">
+      <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:24px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><div style="font-size:20px;line-height:26px;font-weight:600">First approval, route B</div><div style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Tue 20 Oct, 09:07</div></div>
+        <div style="display:flex;align-items:flex-end;gap:32px">
+          <svg width="144" height="144" viewBox="0 0 96 96"><g style="filter:url(#agInk)"><rect x="2" y="2" width="92" height="92" rx="6" style="fill:none;stroke:#D2412B;stroke-width:4"></rect><path d="{{ sealA }}" style="fill:none;stroke:#D2412B;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round"></path></g></svg>
+          <svg width="96" height="96" viewBox="0 0 96 96"><g style="filter:url(#agInk)"><rect x="2" y="2" width="92" height="92" rx="6" style="fill:none;stroke:#D2412B;stroke-width:4"></rect><path d="{{ sealA }}" style="fill:none;stroke:#D2412B;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round"></path></g></svg>
+          <svg width="48" height="48" viewBox="0 0 96 96"><rect x="2" y="2" width="92" height="92" rx="6" style="fill:none;stroke:#D2412B;stroke-width:4"></rect><path d="{{ sealA }}" style="fill:none;stroke:#D2412B;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round"></path></svg>
+        </div>
+        <div style="font-family:'Overpass Mono',monospace;font-size:13px;line-height:18px;color:#172231">Consent fingerprint 3F9A 21C7</div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:24px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><div style="font-size:20px;line-height:26px;font-weight:600">Second approval, route D</div><div style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Tue 20 Oct, 09:12</div></div>
+        <div style="display:flex;align-items:flex-end;gap:32px">
+          <svg width="144" height="144" viewBox="0 0 96 96"><g style="filter:url(#agInk)"><rect x="2" y="2" width="92" height="92" rx="6" style="fill:none;stroke:#D2412B;stroke-width:4"></rect><path d="{{ sealB }}" style="fill:none;stroke:#D2412B;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round"></path></g></svg>
+          <svg width="96" height="96" viewBox="0 0 96 96"><g style="filter:url(#agInk)"><rect x="2" y="2" width="92" height="92" rx="6" style="fill:none;stroke:#D2412B;stroke-width:4"></rect><path d="{{ sealB }}" style="fill:none;stroke:#D2412B;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round"></path></g></svg>
+          <svg width="48" height="48" viewBox="0 0 96 96"><rect x="2" y="2" width="92" height="92" rx="6" style="fill:none;stroke:#D2412B;stroke-width:4"></rect><path d="{{ sealB }}" style="fill:none;stroke:#D2412B;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round"></path></svg>
+        </div>
+        <div style="font-family:'Overpass Mono',monospace;font-size:13px;line-height:18px;color:#172231">Consent fingerprint B771 0E2A</div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:24px">
+        <div style="font-size:20px;line-height:26px;font-weight:600">Before approval</div>
+        <div style="width:96px;height:96px;border:2px dashed #7D8794;border-radius:6px"></div>
+        <div style="font-size:14px;line-height:22px;color:#4A5566">The seal appears when Carlos approves.</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:auto 1fr;gap:48px;background:#FFFFFF;border:1px solid #D5DAD7;border-radius:14px;padding:32px">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="font-size:13px;line-height:18px;font-weight:600;letter-spacing:0.005em;color:#4A5566">Construction of 3F9A 21C7 E04B 88D1</div>
+        <div style="position:relative;width:288px;height:288px">
+          <svg width="288" height="288" viewBox="0 0 96 96" style="position:absolute;inset:0"><rect x="2" y="2" width="92" height="92" rx="6" style="fill:none;stroke:#D2412B;stroke-width:4"></rect><path d="{{ gridPath }}" style="fill:none;stroke:#D5DAD7;stroke-width:0.4"></path><path d="{{ sealA }}" style="fill:none;stroke:#D2412B;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round"></path></svg>
+          <div style="position:absolute;left:36px;top:36px;display:grid;grid-template-columns:repeat(4,48px);grid-auto-rows:48px;gap:6px">
+            <sc-for list="{{ digitsA }}" as="c" hint-placeholder-count="16"><div style="font-family:'Overpass Mono',monospace;font-size:10px;line-height:12px;color:#646D79;padding:2px 3px">{{ c }}</div></sc-for>
+          </div>
+        </div>
+        <div style="font-size:12px;line-height:16px;font-weight:500;color:#646D79;max-width:288px">Outer square radius 6, stroke 4. Sixteen 16 px cells with 2 px gaps, inner margin 12.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="font-size:13px;line-height:18px;font-weight:600;letter-spacing:0.005em;color:#4A5566">Glyph key. Digit div 4 picks the glyph, digit mod 4 the rotation</div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#D5DAD7;border:1px solid #D5DAD7;border-radius:2px;overflow:hidden">
+          <sc-for list="{{ glyphKey }}" as="g" hint-placeholder-count="16">
+            <div style="background:#FFFFFF;padding:12px;display:flex;align-items:center;gap:12px;white-space:nowrap">
+              <svg width="40" height="40" viewBox="0 0 16 16"><path d="{{ g.d }}" style="fill:none;stroke:#D2412B;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round"></path></svg>
+              <div style="display:flex;flex-direction:column;gap:2px"><span style="font-family:'Overpass Mono',monospace;font-size:13px;line-height:18px;color:#172231">{{ g.hex }}</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">{{ g.name }}, {{ g.rot }}</span></div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px">
+          <div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:13px;line-height:18px;font-weight:600">Stamp motion</div><div style="font-size:14px;line-height:22px;color:#4A5566">On approval the seal scales 1.06 to 1 and rotates −2° to 0° over 320 ms while the ink fades in. Once per approval. Instant with reduced motion.</div></div>
+          <div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:13px;line-height:18px;font-weight:600">Ink texture</div><div style="font-size:14px;line-height:22px;color:#4A5566">A faint displacement on the stamp edges at 96 px and above. Off at 48 px and below so the glyphs stay crisp.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Color" style="padding:64px 72px;border-bottom:1px solid #D5DAD7;display:grid;grid-template-columns:280px 1fr;gap:48px">
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <h2 style="margin:0;font-size:26px;line-height:32px;font-weight:600;letter-spacing:-0.01em">Color</h2>
+    <p style="margin:0;font-size:14px;line-height:22px;color:#4A5566;text-wrap:pretty">If something is blue, you can press it or it is the money's route. State colors always travel with an icon and text. Normal debits are never red; red means blocked. Seal red belongs to the seal alone.</p>
+    <p style="margin:0;font-size:14px;line-height:22px;color:#4A5566;text-wrap:pretty">Ratios are computed against surface unless noted.</p>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:32px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:20px;line-height:26px;font-weight:600">Light</div>
+      <div style="display:grid;grid-template-columns:repeat(8,1fr);gap:12px">
+        <sc-for list="{{ lightTokens }}" as="t" hint-placeholder-count="16">
+          <div style="display:flex;flex-direction:column;background:#FFFFFF;border:1px solid #D5DAD7;border-radius:2px;overflow:hidden">
+            <div style="height:72px;background:{{ t.hex }};border-bottom:1px solid #D5DAD7"></div>
+            <div style="padding:10px 12px 12px;display:flex;flex-direction:column;gap:2px">
+              <span style="font-size:13px;line-height:18px;font-weight:600">{{ t.name }}</span>
+              <span style="font-family:'Overpass Mono',monospace;font-size:12px;line-height:16px;color:#4A5566">{{ t.hex }}</span>
+              <span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79;min-height:32px">{{ t.use }}</span>
+              <span style="font-size:12px;line-height:16px;font-weight:600;color:#172231">{{ t.ratio }}</span>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;background:#0E1521;border-radius:14px;padding:32px">
+      <div style="font-size:20px;line-height:26px;font-weight:600;color:#E9EDF2">Dark</div>
+      <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:12px">
+        <sc-for list="{{ darkTokens }}" as="t" hint-placeholder-count="12">
+          <div style="display:flex;flex-direction:column;background:#162030;border:1px solid #2A3648;border-radius:2px;overflow:hidden">
+            <div style="height:56px;background:{{ t.hex }};border-bottom:1px solid #2A3648"></div>
+            <div style="padding:10px 12px 12px;display:flex;flex-direction:column;gap:2px">
+              <span style="font-size:13px;line-height:18px;font-weight:600;color:#E9EDF2">{{ t.name }}</span>
+              <span style="font-family:'Overpass Mono',monospace;font-size:12px;line-height:16px;color:#AAB4C2">{{ t.hex }}</span>
+              <span style="font-size:12px;line-height:16px;font-weight:600;color:#E9EDF2">{{ t.ratio }}</span>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:12px">
+        <span style="font-size:12px;line-height:16px;font-weight:500;color:#8692A3;margin-right:8px">Tints at 14% over surface</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px 0 8px;border-radius:999px;background:#27334D;color:#8FA8FF;font-size:13px;font-weight:600;line-height:1"><span style="width:14px;height:14px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/route.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/route.svg) center/contain no-repeat"></span>Plan ready</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px 0 8px;border-radius:999px;background:#353534;color:#F0B44C;font-size:13px;font-weight:600;line-height:1"><span style="width:14px;height:14px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/refresh-cw.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/refresh-cw.svg) center/contain no-repeat"></span>Checking with the provider</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px 0 8px;border-radius:999px;background:#20383F;color:#5FCB9C;font-size:13px;font-weight:600;line-height:1"><span style="width:14px;height:14px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/badge-check.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/badge-check.svg) center/contain no-repeat"></span>Credited by the university</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px 0 8px;border-radius:999px;background:#372F3E;color:#FF8A92;font-size:13px;font-weight:600;line-height:1"><svg width="14" height="14" viewBox="0 0 24 24"><polygon points="7.5,2 16.5,2 22,7.5 22,16.5 16.5,22 7.5,22 2,16.5 2,7.5" style="fill:none;stroke:currentColor;stroke-width:2.4;stroke-linejoin:round"></polygon><line x1="8" y1="12" x2="16" y2="12" style="stroke:currentColor;stroke-width:2.4;stroke-linecap:round"></line></svg>Blocked</span>
+        <span style="display:inline-flex;align-items:center;gap:8px;margin-left:auto;font-size:12px;line-height:16px;font-weight:500;color:#8692A3"><svg width="28" height="28" viewBox="0 0 96 96"><rect x="2" y="2" width="92" height="92" rx="6" style="fill:none;stroke:#F06A52;stroke-width:5"></rect><path d="{{ sealB }}" style="fill:none;stroke:#F06A52;stroke-width:4;stroke-linecap:round;stroke-linejoin:round"></path></svg>Seal in dark, #F06A52</span>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="font-size:20px;line-height:26px;font-weight:600">Data colors</div>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:24px">
+        <div style="display:flex;flex-direction:column;gap:8px"><div style="height:24px;border-radius:2px;background:#2346C8"></div><span style="font-size:13px;line-height:18px;font-weight:600">Available balance</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">route</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><div style="height:24px;border-radius:2px;background:repeating-linear-gradient(45deg,rgba(35,70,200,.35) 0 5px,rgba(35,70,200,.75) 5px 6.5px)"></div><span style="font-size:13px;line-height:18px;font-weight:600">Arrival reserve</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">route 35% with 45° hatch</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><div style="height:24px;border-radius:2px;background:#9A5B00"></div><span style="font-size:13px;line-height:18px;font-weight:600">Held for a payment</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">wait</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><div style="height:24px;border-radius:2px;background:rgba(74,85,102,.4)"></div><span style="font-size:13px;line-height:18px;font-weight:600">Spent or debited</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">ink-2 at 40%</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><div style="height:24px;border-radius:2px;border:1.5px dashed #646D79"></div><span style="font-size:13px;line-height:18px;font-weight:600">Conditional income</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">muted dashed, no fill, never stacked</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Typography" style="padding:64px 72px;border-bottom:1px solid #D5DAD7;display:grid;grid-template-columns:280px 1fr;gap:48px">
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <h2 style="margin:0;font-size:26px;line-height:32px;font-weight:600;letter-spacing:-0.01em">Typography</h2>
+    <p style="margin:0;font-size:14px;line-height:22px;color:#4A5566;text-wrap:pretty">Overpass, descended from the Highway Gothic road-sign face, carries the whole interface. Source Serif 4 is reserved for approval clauses. Overpass Mono is reserved for fingerprints, the event log and technical identifiers.</p>
+  </div>
+  <div style="display:flex;flex-direction:column;background:#FFFFFF;border:1px solid #D5DAD7;border-radius:14px;overflow:hidden">
+    <div style="display:grid;grid-template-columns:200px 1fr;gap:32px;padding:24px 32px;border-bottom:1px solid #D5DAD7;align-items:baseline"><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;line-height:18px;font-weight:600">Display</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">56/60, 700, −2%. Mobile 40/44</span></div><div style="font-size:56px;line-height:60px;font-weight:700;letter-spacing:-0.02em">Tuition that arrives.</div></div>
+    <div style="display:grid;grid-template-columns:200px 1fr;gap:32px;padding:20px 32px;border-bottom:1px solid #D5DAD7;align-items:baseline"><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;line-height:18px;font-weight:600">H1</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">36/42, 700, −1.5%</span></div><div style="font-size:36px;line-height:42px;font-weight:700;letter-spacing:-0.015em">Payment approval</div></div>
+    <div style="display:grid;grid-template-columns:200px 1fr;gap:32px;padding:20px 32px;border-bottom:1px solid #D5DAD7;align-items:baseline"><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;line-height:18px;font-weight:600">H2</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">26/32, 600, −1%</span></div><div style="font-size:26px;line-height:32px;font-weight:600;letter-spacing:-0.01em">Payment journey</div></div>
+    <div style="display:grid;grid-template-columns:200px 1fr;gap:32px;padding:20px 32px;border-bottom:1px solid #D5DAD7;align-items:baseline"><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;line-height:18px;font-weight:600">H3</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">20/26, 600, −0.5%</span></div><div style="font-size:20px;line-height:26px;font-weight:600;letter-spacing:-0.005em">Family funds</div></div>
+    <div style="display:grid;grid-template-columns:200px 1fr;gap:32px;padding:20px 32px;border-bottom:1px solid #D5DAD7;align-items:baseline"><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;line-height:18px;font-weight:600">Amount XL</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">40/44, 600, −1%</span></div><div style="font-size:40px;line-height:44px;font-weight:600;letter-spacing:-0.01em"><span style="font-size:0.8em;font-weight:500;color:#646D79;margin-right:0.25em">CNY</span>20,000.00</div></div>
+    <div style="display:grid;grid-template-columns:200px 1fr;gap:32px;padding:20px 32px;border-bottom:1px solid #D5DAD7;align-items:baseline"><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;line-height:18px;font-weight:600">Amount L</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">24/30, 600, −0.5%</span></div><div style="display:flex;gap:48px;font-size:24px;line-height:30px;font-weight:600;letter-spacing:-0.005em"><span><span style="font-size:0.8em;font-weight:500;color:#646D79;margin-right:0.25em">USD</span>2,860.00</span><span>−<span style="font-size:0.8em;font-weight:500;color:#646D79;margin:0 0.25em 0 0.1em">USD</span>2,880.00</span></div></div>
+    <div style="display:grid;grid-template-columns:200px 1fr;gap:32px;padding:20px 32px;border-bottom:1px solid #D5DAD7;align-items:baseline"><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;line-height:18px;font-weight:600">Body</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">16/26, 400</span></div><div style="font-size:16px;line-height:26px;max-width:620px">I sent the payment and didn't get a confirmation back. I'm checking the same payment with the provider instead of sending a new one.</div></div>
+    <div style="display:grid;grid-template-columns:200px 1fr;gap:32px;padding:20px 32px;border-bottom:1px solid #D5DAD7;align-items:baseline"><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;line-height:18px;font-weight:600">Body S</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">14/22, 400</span></div><div style="font-size:14px;line-height:22px;color:#4A5566">Takes 72 h. You need it within 48 h.</div></div>
+    <div style="display:grid;grid-template-columns:200px 1fr;gap:32px;padding:20px 32px;border-bottom:1px solid #D5DAD7;align-items:baseline"><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;line-height:18px;font-weight:600">Label</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">13/18, 600, +0.5%</span></div><div style="display:flex;gap:40px;font-size:13px;line-height:18px;font-weight:600;letter-spacing:0.005em;color:#4A5566"><span>University receives</span><span>Proposed debit</span><span>Arrives in</span></div></div>
+    <div style="display:grid;grid-template-columns:200px 1fr;gap:32px;padding:20px 32px;border-bottom:1px solid #D5DAD7;align-items:baseline"><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;line-height:18px;font-weight:600">Caption</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">12/16, 500, +1%</span></div><div style="display:flex;gap:40px;font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.01em;color:#646D79"><span>From the university, 11:14 virtual time</span><span><span style="color:#172231;font-size:15px;font-weight:600;letter-spacing:0">Tue 20 Oct, 09:00</span> virtual time</span></div></div>
+    <div style="display:grid;grid-template-columns:200px 1fr;gap:32px;padding:24px 32px;border-bottom:1px solid #D5DAD7;align-items:baseline"><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;line-height:18px;font-weight:600">Serif clause</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Source Serif 4, 17/28, 400. Approval document only</span></div><div style="font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:28px;max-width:600px">I approve a single tuition payment from my account ending 4821 to Arrival University's registered account, under the terms below.</div></div>
+    <div style="display:grid;grid-template-columns:200px 1fr;gap:32px;padding:20px 32px;align-items:baseline"><div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;line-height:18px;font-weight:600">Mono</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Overpass Mono 13/18. Identifiers only</span></div><div style="display:flex;gap:40px;font-family:'Overpass Mono',monospace;font-size:13px;line-height:18px"><span>Consent fingerprint 3F9A 21C7</span><span style="color:#4A5566">AU-RC-20931</span><span style="color:#4A5566">AG-STUDENT-01</span></div></div>
+  </div>
+</section>
+
+<section data-screen-label="Space and shape" style="padding:64px 72px;border-bottom:1px solid #D5DAD7;display:grid;grid-template-columns:280px 1fr;gap:48px">
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <h2 style="margin:0;font-size:26px;line-height:32px;font-weight:600;letter-spacing:-0.01em">Space, shape and borders</h2>
+    <p style="margin:0;font-size:14px;line-height:22px;color:#4A5566;text-wrap:pretty">A 4 px base. Radius follows hierarchy: documents are sharp, controls are soft, panels are softer. Hierarchy comes from border, background and space; only floating elements cast a shadow.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:24px">
+    <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:14px">
+      <div style="font-size:13px;line-height:18px;font-weight:600;color:#4A5566">Spacing</div>
+      <div style="display:flex;align-items:center;gap:16px"><span style="width:28px;font-size:12px;font-weight:500;color:#646D79">4</span><span style="width:4px;height:12px;background:#2346C8"></span></div>
+      <div style="display:flex;align-items:center;gap:16px"><span style="width:28px;font-size:12px;font-weight:500;color:#646D79">8</span><span style="width:8px;height:12px;background:#2346C8"></span></div>
+      <div style="display:flex;align-items:center;gap:16px"><span style="width:28px;font-size:12px;font-weight:500;color:#646D79">12</span><span style="width:12px;height:12px;background:#2346C8"></span></div>
+      <div style="display:flex;align-items:center;gap:16px"><span style="width:28px;font-size:12px;font-weight:500;color:#646D79">16</span><span style="width:16px;height:12px;background:#2346C8"></span></div>
+      <div style="display:flex;align-items:center;gap:16px"><span style="width:28px;font-size:12px;font-weight:500;color:#646D79">24</span><span style="width:24px;height:12px;background:#2346C8"></span></div>
+      <div style="display:flex;align-items:center;gap:16px"><span style="width:28px;font-size:12px;font-weight:500;color:#646D79">32</span><span style="width:32px;height:12px;background:#2346C8"></span></div>
+      <div style="display:flex;align-items:center;gap:16px"><span style="width:28px;font-size:12px;font-weight:500;color:#646D79">48</span><span style="width:48px;height:12px;background:#2346C8"></span></div>
+      <div style="display:flex;align-items:center;gap:16px"><span style="width:28px;font-size:12px;font-weight:500;color:#646D79">64</span><span style="width:64px;height:12px;background:#2346C8"></span></div>
+      <div style="display:flex;align-items:center;gap:16px"><span style="width:28px;font-size:12px;font-weight:500;color:#646D79">96</span><span style="width:96px;height:12px;background:#2346C8"></span></div>
+      <div style="font-size:12px;line-height:16px;font-weight:500;color:#646D79;margin-top:8px">12 columns, max 1,280 px, 24 px gutters and 32 px margins. Mobile 16 and 16.</div>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:14px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:20px;align-content:start">
+      <div style="grid-column:1/-1;font-size:13px;line-height:18px;font-weight:600;color:#4A5566">Radii</div>
+      <div style="display:flex;flex-direction:column;gap:8px"><div style="height:64px;border:1px solid #7D8794;border-radius:2px;background:#F1F3F2"></div><span style="font-size:13px;font-weight:600">2 px</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Documents, tables, data cells</span></div>
+      <div style="display:flex;flex-direction:column;gap:8px"><div style="height:64px;border:1px solid #7D8794;border-radius:8px;background:#F1F3F2"></div><span style="font-size:13px;font-weight:600">8 px</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Buttons, fields, chips</span></div>
+      <div style="display:flex;flex-direction:column;gap:8px"><div style="height:64px;border:1px solid #7D8794;border-radius:14px;background:#F1F3F2"></div><span style="font-size:13px;font-weight:600">14 px</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Large panels, side sheets</span></div>
+      <div style="display:flex;flex-direction:column;gap:8px"><div style="height:32px;margin:16px 0;border:1px solid #7D8794;border-radius:999px;background:#F1F3F2"></div><span style="font-size:13px;font-weight:600">Full</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Status pills only</span></div>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:18px">
+      <div style="font-size:13px;line-height:18px;font-weight:600;color:#4A5566">Borders, focus and elevation</div>
+      <div style="display:flex;align-items:center;gap:16px"><span style="width:72px;height:0;border-top:1px solid #D5DAD7"></span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">1 px line. Dividers</span></div>
+      <div style="display:flex;align-items:center;gap:16px"><span style="width:72px;height:0;border-top:1px solid #7D8794"></span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">1 px line-strong. Fields, controls</span></div>
+      <div style="display:flex;align-items:center;gap:16px"><span style="width:72px;height:0;border-top:2px solid #2346C8"></span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">2 px route. Selection</span></div>
+      <div style="display:flex;align-items:center;gap:16px"><span style="width:72px;height:0;border-top:3px solid #2346C8"></span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">3 px route. Selected route row bar</span></div>
+      <div style="display:flex;align-items:center;gap:16px;margin-top:6px"><span style="width:72px;height:36px;border-radius:8px;border:1px solid #7D8794;box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px #2346C8"></span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Focus. 2 px route ring, 2 px offset, every interactive element</span></div>
+      <div style="display:flex;align-items:center;gap:16px;margin-top:6px"><span style="width:72px;height:44px;border-radius:8px;background:#FFFFFF;border:1px solid #D5DAD7;box-shadow:0 8px 24px rgba(23,34,49,.12)"></span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Floating only: menus, dialogs, sheets. 0 8 24 ink at 12%</span></div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Components" style="padding:64px 72px;border-bottom:1px solid #D5DAD7;display:flex;flex-direction:column;gap:32px">
+  <div style="display:grid;grid-template-columns:280px 1fr;gap:48px">
+    <h2 style="margin:0;font-size:26px;line-height:32px;font-weight:600;letter-spacing:-0.01em">Components</h2>
+    <p style="margin:0;font-size:14px;line-height:22px;color:#4A5566;max-width:720px">Names match the engineering handoff one to one. Shown with real content from the base payment scenario.</p>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <div style="display:flex;gap:12px;align-items:baseline"><span style="font-size:13px;line-height:18px;font-weight:600">TopBar, SimulationBand, RoleSwitcher, VirtualClock</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">The top border carries the active role: neutral for Sofía, route for Carlos, ink for the evaluator</span></div>
+    <div style="border:1px solid #D5DAD7;border-radius:2px;overflow:hidden;background:#F1F3F2">
+      <div style="height:64px;background:#FFFFFF;border-top:3px solid #D5DAD7;border-bottom:1px solid #D5DAD7;display:flex;align-items:center;gap:24px;padding:0 32px">
+        <div style="white-space:nowrap;line-height:1;font-size:20px;font-weight:700;letter-spacing:-0.01em"><svg width="28" height="28" viewBox="0 0 32 32" style="vertical-align:-3.5px;margin-right:10.5px"><path d="M8 28 V15 A8 8 0 0 1 24 15 V28" style="fill:none;stroke:#172231;stroke-width:4"></path><line x1="2" y1="28" x2="30" y2="28" style="stroke:#172231;stroke-width:2;stroke-linecap:round"></line><circle cx="16" cy="21" r="3.25" style="fill:#2346C8"></circle></svg>ArrivalGuard</div>
+        <span style="width:1px;height:24px;background:#D5DAD7"></span>
+        <span style="font-size:14px;line-height:22px;color:#4A5566">Base payment</span>
+        <div style="margin-left:auto;flex:none;white-space:nowrap;display:flex;align-items:baseline;gap:8px"><span style="font-size:15px;font-weight:600">Tue 20 Oct, 09:00</span><span style="font-size:12px;font-weight:500;color:#646D79">virtual time</span><span style="font-size:12px;font-weight:600;color:#4A5566;padding:2px 6px;border:1px solid #D5DAD7;border-radius:999px">+0 h</span></div>
+        <div style="flex:none;white-space:nowrap;display:flex;gap:2px;padding:3px;background:#F1F3F2;border:1px solid #D5DAD7;border-radius:10px">
+          <div style="display:flex;align-items:center;gap:8px;height:36px;padding:0 12px 0 6px;background:#FFFFFF;border:1px solid #7D8794;border-radius:8px"><span style="width:24px;height:24px;border-radius:50%;background:#E8EDFB;color:#172231;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">SR</span><span style="font-size:14px;font-weight:600;white-space:nowrap">Sofía<span style="font-weight:400;color:#4A5566">, student</span></span></div>
+          <div style="display:flex;align-items:center;gap:8px;height:36px;padding:0 12px 0 6px;border:1px solid transparent;border-radius:8px"><span style="position:relative;width:24px;height:24px;border-radius:50%;background:#FFFFFF;border:1px solid #D5DAD7;color:#172231;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">CR<span style="position:absolute;top:-2px;right:-2px;width:9px;height:9px;border-radius:50%;background:#9A5B00;border:2px solid #F1F3F2"></span></span><span style="font-size:14px;font-weight:600;white-space:nowrap;color:#4A5566">Carlos<span style="font-weight:400">, payer</span></span></div>
+          <div style="display:flex;align-items:center;gap:8px;height:36px;padding:0 12px 0 6px;border:1px solid transparent;border-radius:8px"><span style="width:24px;height:24px;border-radius:50%;background:#172231;color:#FFFFFF;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">EV</span><span style="font-size:14px;font-weight:600;color:#4A5566">Evaluator</span></div>
+        </div>
+        <button style="display:flex;align-items:center;gap:8px;height:40px;padding:0 16px;background:#FFFFFF;border:1px solid #7D8794;border-radius:8px;font:600 15px Overpass,sans-serif;color:#172231"><span style="width:18px;height:18px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/file-text.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/file-text.svg) center/contain no-repeat"></span>Evidence</button>
+      </div>
+      <div style="height:32px;display:flex;align-items:center;gap:12px;padding:0 32px;background:#E7EAE8;border-bottom:1px solid #D5DAD7"><span style="width:28px;height:12px;border-radius:1px;background:repeating-linear-gradient(-45deg,#172231 0 3px,#F1F3F2 3px 6px)"></span><span style="font-size:13px;line-height:18px;font-weight:500;white-space:nowrap">Simulated funds and a fictional university. No real money moves.</span></div>
+      <div style="height:40px"></div>
+    </div>
+    <div style="display:flex;gap:32px;align-items:center">
+      <div style="display:flex;align-items:center;gap:10px"><span style="width:56px;height:3px;background:#D5DAD7"></span><span style="font-size:12px;font-weight:500;color:#646D79">Sofía</span></div>
+      <div style="display:flex;align-items:center;gap:10px"><span style="width:56px;height:3px;background:#2346C8"></span><span style="font-size:12px;font-weight:500;color:#646D79">Carlos</span></div>
+      <div style="display:flex;align-items:center;gap:10px"><span style="width:56px;height:3px;background:#172231"></span><span style="font-size:12px;font-weight:500;color:#646D79">Evaluator</span></div>
+      <div style="display:flex;align-items:center;gap:10px"><span style="width:9px;height:9px;border-radius:50%;background:#9A5B00"></span><span style="font-size:12px;font-weight:500;color:#646D79">Something pending for that role</span></div>
+      <div style="display:flex;align-items:center;gap:10px;margin-left:auto"><span style="width:28px;height:12px;border-radius:1px;background:repeating-linear-gradient(-45deg,#172231 0 3px,#F1F3F2 3px 6px)"></span><span style="font-size:12px;font-weight:500;color:#646D79">Mobile: Simulated funds. No real money moves.</span></div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:24px">
+    <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;gap:12px;align-items:baseline"><span style="font-size:13px;line-height:18px;font-weight:600">Button</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">40 px high, 44 on touch. One primary per area. No arrows</span></div>
+      <div style="display:grid;grid-template-columns:96px repeat(6,auto);gap:12px 24px;align-items:center;justify-content:start">
+        <span></span><span style="font-size:12px;font-weight:500;color:#646D79">Default</span><span style="font-size:12px;font-weight:500;color:#646D79">Hover</span><span style="font-size:12px;font-weight:500;color:#646D79">Focus</span><span style="font-size:12px;font-weight:500;color:#646D79">Active</span><span style="font-size:12px;font-weight:500;color:#646D79">Disabled</span><span style="font-size:12px;font-weight:500;color:#646D79">Loading</span>
+        <span style="font-size:12px;font-weight:600;color:#4A5566">Primary</span>
+        <button style="height:40px;padding:0 16px;border:0;border-radius:8px;background:#2346C8;color:#FFFFFF;font:600 15px Overpass,sans-serif;white-space:nowrap">Send payment</button>
+        <button style="height:40px;padding:0 16px;border:0;border-radius:8px;background:#1C3AAD;color:#FFFFFF;font:600 15px Overpass,sans-serif;white-space:nowrap">Send payment</button>
+        <button style="height:40px;padding:0 16px;border:0;border-radius:8px;background:#2346C8;color:#FFFFFF;font:600 15px Overpass,sans-serif;box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px #2346C8;white-space:nowrap">Send payment</button>
+        <button style="height:40px;padding:0 16px;border:0;border-radius:8px;background:#172F92;color:#FFFFFF;font:600 15px Overpass,sans-serif;white-space:nowrap">Send payment</button>
+        <button style="height:40px;padding:0 16px;border:0;border-radius:8px;background:#E3E7E5;color:#646D79;font:600 15px Overpass,sans-serif;white-space:nowrap">Send payment</button>
+        <button style="height:40px;padding:0 16px;border:0;border-radius:8px;background:#2346C8;color:#FFFFFF;font:600 15px Overpass,sans-serif;display:flex;align-items:center;gap:8px;white-space:nowrap"><span style="width:14px;height:14px;border-radius:50%;border:2px solid rgba(255,255,255,.35);border-top-color:#FFFFFF"></span>Sending</button>
+        <span style="font-size:12px;font-weight:600;color:#4A5566">Secondary</span>
+        <button style="height:40px;padding:0 16px;border:1px solid #7D8794;border-radius:8px;background:#FFFFFF;color:#172231;font:600 15px Overpass,sans-serif;white-space:nowrap">Review or revoke</button>
+        <button style="height:40px;padding:0 16px;border:1px solid #172231;border-radius:8px;background:#F1F3F2;color:#172231;font:600 15px Overpass,sans-serif;white-space:nowrap">Review or revoke</button>
+        <button style="height:40px;padding:0 16px;border:1px solid #7D8794;border-radius:8px;background:#FFFFFF;color:#172231;font:600 15px Overpass,sans-serif;box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px #2346C8;white-space:nowrap">Review or revoke</button>
+        <button style="height:40px;padding:0 16px;border:1px solid #172231;border-radius:8px;background:#E3E7E5;color:#172231;font:600 15px Overpass,sans-serif;white-space:nowrap">Review or revoke</button>
+        <button style="height:40px;padding:0 16px;border:1px solid #D5DAD7;border-radius:8px;background:#FFFFFF;color:#646D79;font:600 15px Overpass,sans-serif;white-space:nowrap">Review or revoke</button>
+        <button style="height:40px;padding:0 16px;border:1px solid #7D8794;border-radius:8px;background:#FFFFFF;color:#172231;font:600 15px Overpass,sans-serif;display:flex;align-items:center;gap:8px;white-space:nowrap"><span style="width:14px;height:14px;border-radius:50%;border:2px solid #D5DAD7;border-top-color:#172231"></span>Checking</button>
+        <span style="font-size:12px;font-weight:600;color:#4A5566">Quiet</span>
+        <button style="height:40px;padding:0 8px;border:0;background:transparent;color:#2346C8;font:600 15px Overpass,sans-serif;justify-self:start;white-space:nowrap">Watch the video</button>
+        <button style="height:40px;padding:0 8px;border:0;border-radius:8px;background:#E8EDFB;color:#1C3AAD;font:600 15px Overpass,sans-serif;justify-self:start;white-space:nowrap">Watch the video</button>
+        <button style="height:40px;padding:0 8px;border:0;border-radius:8px;background:transparent;color:#2346C8;font:600 15px Overpass,sans-serif;box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px #2346C8;justify-self:start;white-space:nowrap">Watch the video</button>
+        <span></span>
+        <button style="height:40px;padding:0 8px;border:0;background:transparent;color:#646D79;font:600 15px Overpass,sans-serif;justify-self:start;white-space:nowrap">Watch the video</button>
+        <span></span>
+        <span style="font-size:12px;font-weight:600;color:#4A5566">Danger</span>
+        <button style="height:40px;padding:0 16px;border:1px solid #A8172B;border-radius:8px;background:#FFFFFF;color:#A8172B;font:600 15px Overpass,sans-serif;white-space:nowrap">Revoke approval</button>
+        <button style="height:40px;padding:0 16px;border:1px solid #A8172B;border-radius:8px;background:#FBE7EA;color:#A8172B;font:600 15px Overpass,sans-serif;white-space:nowrap">Revoke approval</button>
+        <button style="height:40px;padding:0 16px;border:1px solid #A8172B;border-radius:8px;background:#FFFFFF;color:#A8172B;font:600 15px Overpass,sans-serif;box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px #2346C8;white-space:nowrap">Revoke approval</button>
+        <span></span><span></span><span></span>
+      </div>
+      <div style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Danger is used only for revoking an approval or a permission.</div>
+    </div>
+
+    <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;gap:12px;align-items:baseline"><span style="font-size:13px;line-height:18px;font-weight:600">Input</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Label above, help or error below</span></div>
+      <div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:20px 16px">
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:13px;line-height:18px;font-weight:600;letter-spacing:0.005em">Must arrive within</span><div style="height:40px;border:1px solid #7D8794;border-radius:8px;display:flex;align-items:center;padding:0 12px;font-size:16px">48 h</div><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Default</span></div>
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:13px;line-height:18px;font-weight:600;letter-spacing:0.005em">Must arrive within</span><div style="height:40px;border:1px solid #172231;border-radius:8px;display:flex;align-items:center;padding:0 12px;font-size:16px">48 h</div><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Hover</span></div>
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:13px;line-height:18px;font-weight:600;letter-spacing:0.005em">Must arrive within</span><div style="height:40px;border:1px solid #2346C8;border-radius:8px;display:flex;align-items:center;padding:0 12px;font-size:16px;box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px #2346C8">6 h<span style="width:1.5px;height:20px;background:#172231;margin-left:2px"></span></div><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">From Tue 20 Oct, 09:00 virtual time</span></div>
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:13px;line-height:18px;font-weight:600;letter-spacing:0.005em">Tuition limit</span><div style="height:40px;border:1px solid #A8172B;border-radius:8px;display:flex;align-items:center;padding:0 12px;font-size:16px"><span style="font-size:0.8em;font-weight:500;color:#646D79;margin-right:0.3em">USD</span>2,500.00</div><span style="font-size:12px;line-height:16px;font-weight:500;color:#A8172B;display:flex;gap:6px;align-items:center"><svg width="12" height="12" viewBox="0 0 24 24"><polygon points="7.5,2 16.5,2 22,7.5 22,16.5 16.5,22 7.5,22 2,16.5 2,7.5" style="fill:none;stroke:currentColor;stroke-width:2.6;stroke-linejoin:round"></polygon><line x1="8" y1="12" x2="16" y2="12" style="stroke:currentColor;stroke-width:2.6;stroke-linecap:round"></line></svg>Below the approved debit of USD 2,880.00</span></div>
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:13px;line-height:18px;font-weight:600;letter-spacing:0.005em;color:#646D79">Pays to</span><div style="height:40px;border:1px solid #D5DAD7;background:#F1F3F2;border-radius:8px;display:flex;align-items:center;padding:0 12px;font-size:16px;color:#4A5566">Account ending 0098</div><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Fixed by the invoice</span></div>
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:13px;line-height:18px;font-weight:600;letter-spacing:0.005em">Scenario</span><div style="height:40px;border:1px solid #7D8794;border-radius:8px;display:flex;align-items:center;justify-content:space-between;padding:0 12px;font-size:16px">Base payment<span style="width:16px;height:16px;background:#4A5566;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/chevron-down.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/chevron-down.svg) center/contain no-repeat"></span></div><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Select</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;border-top:1px solid #D5DAD7;padding-top:20px">
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <span style="font-size:13px;line-height:18px;font-weight:600">Tabs</span>
+          <div style="display:flex;gap:24px;border-bottom:1px solid #D5DAD7">
+            <span style="padding:10px 0;font-size:15px;font-weight:600;border-bottom:2px solid #2346C8;margin-bottom:-1px">Chat</span>
+            <span style="padding:10px 0;font-size:15px;font-weight:600;color:#4A5566;display:flex;gap:6px;align-items:center">Payment<span style="width:7px;height:7px;border-radius:50%;background:#2346C8"></span></span>
+            <span style="padding:10px 0;font-size:15px;font-weight:600;color:#4A5566">Funds</span>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <span style="font-size:13px;line-height:18px;font-weight:600">Switch</span>
+          <div style="display:flex;gap:20px;align-items:center;height:44px">
+            <span style="width:36px;height:20px;border-radius:999px;background:#7D8794;position:relative"><span style="position:absolute;left:2px;top:2px;width:16px;height:16px;border-radius:50%;background:#FFFFFF"></span></span>
+            <span style="width:36px;height:20px;border-radius:999px;background:#2346C8;position:relative"><span style="position:absolute;right:2px;top:2px;width:16px;height:16px;border-radius:50%;background:#FFFFFF"></span></span>
+            <span style="width:36px;height:20px;border-radius:999px;background:#2346C8;position:relative;box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px #2346C8"><span style="position:absolute;right:2px;top:2px;width:16px;height:16px;border-radius:50%;background:#FFFFFF"></span></span>
+            <span style="width:36px;height:20px;border-radius:999px;background:#E3E7E5;position:relative"><span style="position:absolute;left:2px;top:2px;width:16px;height:16px;border-radius:50%;background:#FFFFFF"></span></span>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <span style="font-size:13px;line-height:18px;font-weight:600">Tooltip and toast</span>
+          <div style="display:flex;gap:16px;align-items:center">
+            <span style="background:#172231;color:#FFFFFF;font-size:12px;line-height:16px;font-weight:500;padding:6px 10px;border-radius:6px;box-shadow:0 8px 24px rgba(23,34,49,.12)">Last 4 digits only</span>
+            <span style="display:flex;align-items:center;gap:10px;background:#FFFFFF;border:1px solid #D5DAD7;border-radius:8px;padding:10px 14px;box-shadow:0 8px 24px rgba(23,34,49,.12);font-size:14px;font-weight:600"><span style="width:18px;height:18px;background:#12734F;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/badge-check.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/badge-check.svg) center/contain no-repeat"></span>Payment approved</span>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <span style="font-size:13px;line-height:18px;font-weight:600">Skeleton</span>
+          <div style="display:flex;flex-direction:column;gap:8px;padding-top:4px"><span style="width:60%;height:12px;border-radius:2px;background:#E3E7E5"></span><span style="width:85%;height:12px;border-radius:2px;background:#E3E7E5"></span><span style="width:40%;height:12px;border-radius:2px;background:#E3E7E5"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;gap:12px;align-items:baseline"><span style="font-size:13px;line-height:18px;font-weight:600">StatusPill</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">One state per pill: icon, text and tint, always together</span></div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px 10px">
+      <span style="display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px 0 8px;border-radius:999px;background:#F1F3F2;box-shadow:inset 0 0 0 1px #D5DAD7;color:#4A5566;font-size:13px;font-weight:600;line-height:1"><span style="width:14px;height:14px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/circle-dashed.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/circle-dashed.svg) center/contain no-repeat"></span>Details needed</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px 0 8px;border-radius:999px;background:#E8EDFB;color:#2346C8;font-size:13px;font-weight:600;line-height:1"><span style="width:14px;height:14px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/route.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/route.svg) center/contain no-repeat"></span>Plan ready</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px 0 8px;border-radius:999px;background:#FBF0DC;color:#9A5B00;font-size:13px;font-weight:600;line-height:1"><span style="width:14px;height:14px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/hourglass.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/hourglass.svg) center/contain no-repeat"></span>Waiting for Carlos</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px 0 8px;border-radius:999px;background:#E8EDFB;color:#2346C8;font-size:13px;font-weight:600;line-height:1"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="1" y="1" width="12" height="12" rx="2" style="fill:none;stroke:#D2412B;stroke-width:1.6"></rect><rect x="4" y="4" width="2.2" height="2.2" style="fill:#D2412B"></rect><rect x="7.8" y="4" width="2.2" height="2.2" style="fill:#D2412B"></rect><rect x="4" y="7.8" width="2.2" height="2.2" style="fill:#D2412B"></rect><rect x="7.8" y="7.8" width="2.2" height="2.2" style="fill:#D2412B"></rect></svg>Approved</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px 0 8px;border-radius:999px;background:#E8EDFB;color:#2346C8;font-size:13px;font-weight:600;line-height:1"><span style="width:14px;height:14px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/send.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/send.svg) center/contain no-repeat"></span>Sending</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px 0 8px;border-radius:999px;background:#FBF0DC;color:#9A5B00;font-size:13px;font-weight:600;line-height:1"><span style="width:14px;height:14px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/refresh-cw.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/refresh-cw.svg) center/contain no-repeat"></span>Checking with the provider</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px 0 8px;border-radius:999px;background:#E8EDFB;color:#2346C8;font-size:13px;font-weight:600;line-height:1"><span style="width:14px;height:14px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/check-check.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/check-check.svg) center/contain no-repeat"></span>Accepted by provider</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px 0 8px;border-radius:999px;background:#FBF0DC;color:#9A5B00;font-size:13px;font-weight:600;line-height:1"><span style="width:14px;height:14px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/landmark.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/landmark.svg) center/contain no-repeat"></span>Waiting for the university</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px 0 8px;border-radius:999px;background:#E3F2EB;color:#12734F;font-size:13px;font-weight:600;line-height:1"><span style="width:14px;height:14px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/badge-check.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/badge-check.svg) center/contain no-repeat"></span>Credited by the university</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px 0 8px;border-radius:999px;background:#E3F2EB;color:#12734F;font-size:13px;font-weight:600;line-height:1"><span style="width:14px;height:14px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/badge-check.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/badge-check.svg) center/contain no-repeat"></span>Delivered</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px 0 8px;border-radius:999px;background:#FBE7EA;color:#A8172B;font-size:13px;font-weight:600;line-height:1"><svg width="14" height="14" viewBox="0 0 24 24"><polygon points="7.5,2 16.5,2 22,7.5 22,16.5 16.5,22 7.5,22 2,16.5 2,7.5" style="fill:none;stroke:currentColor;stroke-width:2.4;stroke-linejoin:round"></polygon><line x1="8" y1="12" x2="16" y2="12" style="stroke:currentColor;stroke-width:2.4;stroke-linecap:round"></line></svg>Blocked</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px 0 8px;border-radius:999px;background:#F1F3F2;box-shadow:inset 0 0 0 1px #D5DAD7;color:#4A5566;font-size:13px;font-weight:600;line-height:1"><span style="width:14px;height:14px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/circle-slash.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/circle-slash.svg) center/contain no-repeat"></span>Failed, no money left the account</span>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+      <span style="font-size:12px;font-weight:500;color:#646D79;margin-right:6px">Refund</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px 0 8px;border-radius:999px;background:#E8EDFB;color:#2346C8;font-size:13px;font-weight:600;line-height:1"><span style="width:14px;height:14px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/undo-2.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/undo-2.svg) center/contain no-repeat"></span>Refund requested</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px 0 8px;border-radius:999px;background:#FBF0DC;color:#9A5B00;font-size:13px;font-weight:600;line-height:1"><span style="width:14px;height:14px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/hourglass.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/hourglass.svg) center/contain no-repeat"></span>Under review</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px 0 8px;border-radius:999px;background:#E3F2EB;color:#12734F;font-size:13px;font-weight:600;line-height:1"><span style="width:14px;height:14px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/badge-check.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/badge-check.svg) center/contain no-repeat"></span>Refunded</span>
+      <span style="display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px 0 8px;border-radius:999px;background:#FBE7EA;color:#A8172B;font-size:13px;font-weight:600;line-height:1"><svg width="14" height="14" viewBox="0 0 24 24"><polygon points="7.5,2 16.5,2 22,7.5 22,16.5 16.5,22 7.5,22 2,16.5 2,7.5" style="fill:none;stroke:currentColor;stroke-width:2.4;stroke-linejoin:round"></polygon><line x1="8" y1="12" x2="16" y2="12" style="stroke:currentColor;stroke-width:2.4;stroke-linecap:round"></line></svg>Refund declined</span>
+    </div>
+  </div>
+
+  <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;gap:12px;align-items:baseline"><span style="font-size:13px;line-height:18px;font-weight:600">RouteBoard</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">An arrivals board. Selected first, then other viable routes, then rejected routes with the reason in the row</span></div>
+    <div style="border:1px solid #D5DAD7;border-radius:2px;overflow:hidden">
+      <div style="display:grid;grid-template-columns:3px 200px 110px 190px 160px 1fr;align-items:center;background:#F1F3F2;border-bottom:1px solid #D5DAD7;height:40px;font-size:13px;font-weight:600;letter-spacing:0.005em;color:#4A5566"><span></span><span style="padding-left:20px">Route</span><span>Arrives in</span><span style="text-align:right;padding-right:32px">University receives</span><span style="text-align:right;padding-right:32px">Costs</span><span>Status</span></div>
+      <div style="display:grid;grid-template-columns:3px 200px 110px 190px 160px 1fr;align-items:center;min-height:64px;border-bottom:1px solid #D5DAD7;background:#FFFFFF"><span style="align-self:stretch;background:#2346C8"></span><span style="padding-left:20px;display:flex;align-items:center;gap:12px"><span style="width:28px;height:28px;border-radius:2px;background:#2346C8;color:#FFFFFF;font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center">B</span><span style="font-size:14px;line-height:18px">Edu Pay Partner</span></span><span style="font-size:16px;font-weight:600">24 h</span><span style="text-align:right;padding-right:32px;font-size:16px;font-weight:600"><span style="font-size:0.8em;font-weight:500;color:#646D79;margin-right:0.3em">CNY</span>20,000.00</span><span style="text-align:right;padding-right:32px;font-size:16px;font-weight:600"><span style="font-size:0.8em;font-weight:500;color:#646D79;margin-right:0.3em">USD</span>2,860.00</span><span style="display:flex;gap:12px;align-items:center"><span style="display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px 0 8px;border-radius:999px;background:#E8EDFB;color:#2346C8;font-size:13px;font-weight:600;line-height:1"><span style="width:14px;height:14px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/route.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/route.svg) center/contain no-repeat"></span>Selected</span><span style="font-size:14px;color:#4A5566">Lowest cost that meets every rule</span></span></div>
+      <div style="display:grid;grid-template-columns:3px 200px 110px 190px 160px 1fr;align-items:center;min-height:64px;border-bottom:1px solid #D5DAD7"><span></span><span style="padding-left:20px;display:flex;align-items:center;gap:12px"><span style="width:28px;height:28px;border-radius:2px;border:1.5px solid #172231;font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center">D</span></span><span style="font-size:16px;font-weight:600">2 h</span><span style="text-align:right;padding-right:32px;font-size:16px;font-weight:600"><span style="font-size:0.8em;font-weight:500;color:#646D79;margin-right:0.3em">CNY</span>20,000.00</span><span style="text-align:right;padding-right:32px;font-size:16px;font-weight:600"><span style="font-size:0.8em;font-weight:500;color:#646D79;margin-right:0.3em">USD</span>2,880.00</span><span style="font-size:14px;color:#172231">Viable, costs more</span></div>
+      <div style="display:grid;grid-template-columns:3px 200px 110px 190px 160px 1fr;align-items:center;min-height:64px;border-bottom:1px solid #D5DAD7;color:#4A5566"><span></span><span style="padding-left:20px"><span style="width:28px;height:28px;border-radius:2px;border:1.5px solid #7D8794;font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center">A</span></span><span style="font-size:16px">72 h</span><span style="text-align:right;padding-right:32px;font-size:16px"><span style="font-size:0.8em;font-weight:500;color:#646D79;margin-right:0.3em">CNY</span>20,000.00</span><span style="text-align:right;padding-right:32px;font-size:16px"><span style="font-size:0.8em;font-weight:500;color:#646D79;margin-right:0.3em">USD</span>2,820.00</span><span style="display:flex;flex-direction:column;padding:10px 0"><span style="font-size:14px;line-height:22px;font-weight:600;color:#172231">Arrives too late</span><span style="font-size:14px;line-height:22px">Takes 72 h. You need it within 48 h.</span></span></div>
+      <div style="display:grid;grid-template-columns:3px 200px 110px 190px 160px 1fr;align-items:center;min-height:64px;border-bottom:1px solid #D5DAD7;color:#4A5566"><span></span><span style="padding-left:20px"><span style="width:28px;height:28px;border-radius:2px;border:1.5px solid #7D8794;font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center">C</span></span><span style="font-size:16px">12 h</span><span style="text-align:right;padding-right:32px;font-size:16px"><span style="font-size:0.8em;font-weight:500;color:#646D79;margin-right:0.3em">CNY</span>19,800.00</span><span style="text-align:right;padding-right:32px;font-size:16px"><span style="font-size:0.8em;font-weight:500;color:#646D79;margin-right:0.3em">USD</span>2,840.00</span><span style="display:flex;flex-direction:column;padding:10px 0"><span style="font-size:14px;line-height:22px;font-weight:600;color:#172231">University would receive less</span><span style="font-size:14px;line-height:22px">Delivers CNY 19,800.00. The invoice is CNY 20,000.00.</span></span></div>
+      <div style="display:grid;grid-template-columns:3px 200px 110px 190px 160px 1fr;align-items:center;min-height:64px;color:#4A5566"><span></span><span style="padding-left:20px"><span style="width:28px;height:28px;border-radius:2px;border:1.5px solid #7D8794;font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center">E</span></span><span style="font-size:16px">12 h</span><span style="text-align:right;padding-right:32px;font-size:16px"><span style="font-size:0.8em;font-weight:500;color:#646D79;margin-right:0.3em">CNY</span>20,000.00</span><span style="text-align:right;padding-right:32px;font-size:16px"><span style="font-size:0.8em;font-weight:500;color:#646D79;margin-right:0.3em">USD</span>2,830.00</span><span style="display:flex;flex-direction:column;padding:10px 0"><span style="font-size:14px;line-height:22px;font-weight:600;color:#172231">Not the university's registered account</span><span style="font-size:14px;line-height:22px">Payments go only to the account on the invoice.</span></span></div>
+    </div>
+  </div>
+
+  <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;gap:12px;align-items:baseline"><span style="font-size:13px;line-height:18px;font-weight:600">JourneyLine</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Stations joined like a metro line. The line fills from station to station in 400 ms, ease out. The uncertain segment drifts at 2 s per cycle, still with reduced motion</span></div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <span style="font-size:12px;font-weight:500;color:#646D79">Checking with the provider, 09:13 virtual time</span>
+      <div style="display:grid;grid-template-columns:repeat(6,1fr)">
+        <div style="display:flex;flex-direction:column;gap:10px"><div style="display:flex;align-items:center;height:28px"><span style="flex:1"></span><span style="width:16px;height:16px;border-radius:50%;background:#2346C8"></span><span style="flex:1;height:3px;background:#2346C8"></span></div><div style="text-align:center;display:flex;flex-direction:column"><span style="font-size:14px;font-weight:600">Planned</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">09:09, ArrivalGuard</span></div></div>
+        <div style="display:flex;flex-direction:column;gap:10px"><div style="display:flex;align-items:center;height:28px"><span style="flex:1;height:3px;background:#2346C8"></span><span style="width:16px;height:16px;border-radius:50%;background:#2346C8"></span><span style="flex:1;height:3px;background:#2346C8"></span></div><div style="text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px"><span style="font-size:14px;font-weight:600">Approved</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">09:12, Carlos</span><svg width="28" height="28" viewBox="0 0 96 96"><rect x="2" y="2" width="92" height="92" rx="6" style="fill:none;stroke:#D2412B;stroke-width:5"></rect><path d="{{ sealB }}" style="fill:none;stroke:#D2412B;stroke-width:4;stroke-linecap:round;stroke-linejoin:round"></path></svg></div></div>
+        <div style="display:flex;flex-direction:column;gap:10px"><div style="display:flex;align-items:center;height:28px"><span style="flex:1;height:3px;background:#2346C8"></span><span style="width:16px;height:16px;border-radius:50%;background:#2346C8"></span><span style="flex:1;height:3px;background:repeating-linear-gradient(90deg,#9A5B00 0 5px,transparent 5px 10px)"></span></div><div style="text-align:center;display:flex;flex-direction:column"><span style="font-size:14px;font-weight:600">Sent</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">09:13, ArrivalGuard</span></div></div>
+        <div style="display:flex;flex-direction:column;gap:10px"><div style="display:flex;align-items:center;height:28px"><span style="flex:1;height:3px;background:repeating-linear-gradient(90deg,#9A5B00 0 5px,transparent 5px 10px)"></span><span style="width:20px;height:20px;border-radius:50%;border:3px dashed #9A5B00;background:#FFFFFF"></span><span style="flex:1;height:2px;background:#D5DAD7"></span></div><div style="text-align:center;display:flex;flex-direction:column"><span style="font-size:14px;font-weight:600;color:#9A5B00">Checking with the provider</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">No response yet</span></div></div>
+        <div style="display:flex;flex-direction:column;gap:10px"><div style="display:flex;align-items:center;height:28px"><span style="flex:1;height:2px;background:#D5DAD7"></span><span style="width:12px;height:12px;border-radius:50%;border:2px solid #7D8794;background:#FFFFFF"></span><span style="flex:1;height:2px;background:#D5DAD7"></span></div><div style="text-align:center"><span style="font-size:14px;font-weight:600;color:#4A5566">University</span></div></div>
+        <div style="display:flex;flex-direction:column;gap:10px"><div style="display:flex;align-items:center;height:28px"><span style="flex:1;height:2px;background:#D5DAD7"></span><span style="width:12px;height:12px;border-radius:50%;border:2px solid #7D8794;background:#FFFFFF"></span><span style="flex:1"></span></div><div style="text-align:center"><span style="font-size:14px;font-weight:600;color:#4A5566">Credited</span></div></div>
+      </div>
+    </div>
+    <div style="height:1px;background:#D5DAD7"></div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <span style="font-size:12px;font-weight:500;color:#646D79">Credited, 11:14 virtual time</span>
+      <div style="display:grid;grid-template-columns:repeat(6,1fr)">
+        <div style="display:flex;flex-direction:column;gap:10px"><div style="display:flex;align-items:center;height:28px"><span style="flex:1"></span><span style="width:16px;height:16px;border-radius:50%;background:#2346C8"></span><span style="flex:1;height:3px;background:#2346C8"></span></div><div style="text-align:center;display:flex;flex-direction:column"><span style="font-size:14px;font-weight:600">Planned</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">09:09, ArrivalGuard</span></div></div>
+        <div style="display:flex;flex-direction:column;gap:10px"><div style="display:flex;align-items:center;height:28px"><span style="flex:1;height:3px;background:#2346C8"></span><span style="width:16px;height:16px;border-radius:50%;background:#2346C8"></span><span style="flex:1;height:3px;background:#2346C8"></span></div><div style="text-align:center;display:flex;flex-direction:column"><span style="font-size:14px;font-weight:600">Approved</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">09:12, Carlos</span></div></div>
+        <div style="display:flex;flex-direction:column;gap:10px"><div style="display:flex;align-items:center;height:28px"><span style="flex:1;height:3px;background:#2346C8"></span><span style="width:16px;height:16px;border-radius:50%;background:#2346C8"></span><span style="flex:1;height:3px;background:#2346C8"></span></div><div style="text-align:center;display:flex;flex-direction:column"><span style="font-size:14px;font-weight:600">Sent</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">09:13, ArrivalGuard</span></div></div>
+        <div style="display:flex;flex-direction:column;gap:10px"><div style="display:flex;align-items:center;height:28px"><span style="flex:1;height:3px;background:#2346C8"></span><span style="width:16px;height:16px;border-radius:50%;background:#2346C8"></span><span style="flex:1;height:3px;background:#2346C8"></span></div><div style="text-align:center;display:flex;flex-direction:column"><span style="font-size:14px;font-weight:600">Accepted</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">09:14, Provider</span></div></div>
+        <div style="display:flex;flex-direction:column;gap:10px"><div style="display:flex;align-items:center;height:28px"><span style="flex:1;height:3px;background:#2346C8"></span><span style="width:16px;height:16px;border-radius:50%;background:#2346C8"></span><span style="flex:1;height:3px;background:#12734F"></span></div><div style="text-align:center;display:flex;flex-direction:column"><span style="font-size:14px;font-weight:600">University</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">11:14, University</span></div></div>
+        <div style="display:flex;flex-direction:column;gap:10px"><div style="display:flex;align-items:center;height:28px"><span style="flex:1;height:3px;background:#12734F"></span><span style="width:28px;height:28px;border-radius:50%;background:#12734F;display:flex;align-items:center;justify-content:center"><span style="width:16px;height:16px;background:#FFFFFF;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/check.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/check.svg) center/contain no-repeat"></span></span><span style="flex:1"></span></div><div style="text-align:center;display:flex;flex-direction:column"><span style="font-size:14px;font-weight:600;color:#12734F">Credited by the university</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">From the university, 11:14 virtual time</span><span style="font-family:'Overpass Mono',monospace;font-size:12px;line-height:16px;color:#4A5566">AU-RC-20931</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1.25fr 1fr;gap:24px">
+    <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:28px">
+      <div style="display:flex;gap:12px;align-items:baseline"><span style="font-size:13px;line-height:18px;font-weight:600">FundsBar</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Direct labels, no legend. Conditional income stays apart</span></div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:20px;line-height:26px;font-weight:600">Family funds</span><span style="font-size:24px;line-height:30px;font-weight:600"><span style="font-size:0.8em;font-weight:500;color:#646D79;margin-right:0.25em">USD</span>5,000.00</span></div>
+        <div style="display:grid;grid-template-columns:64fr 36fr;gap:3px;font-size:13px;line-height:18px"><span style="display:flex;flex-direction:column"><span style="color:#4A5566">Available for tuition</span><span style="font-weight:600">USD 3,200.00</span></span><span style="display:flex;flex-direction:column"><span style="color:#4A5566">Arrival reserve</span><span style="font-weight:600">USD 1,800.00</span></span></div>
+        <div style="position:relative;display:grid;grid-template-columns:64fr 36fr;gap:3px;height:28px"><span style="background:#2346C8;border-radius:2px 0 0 2px"></span><span style="background:repeating-linear-gradient(45deg,rgba(35,70,200,.35) 0 5px,rgba(35,70,200,.75) 5px 6.5px);border-radius:0 2px 2px 0"></span><span style="position:absolute;left:58%;top:-6px;bottom:-6px;width:2px;background:#172231"></span></div>
+        <div style="position:relative;height:20px"><span style="position:absolute;left:58%;transform:translateX(-50%);font-size:12px;line-height:16px;font-weight:600;white-space:nowrap">Tuition limit USD 2,900.00</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-size:12px;font-weight:500;color:#646D79">After the credit, 11:14 virtual time</span>
+        <div style="display:grid;grid-template-columns:57.6fr 6.4fr 36fr;gap:3px;font-size:13px;line-height:18px"><span style="display:flex;flex-direction:column"><span style="color:#4A5566">Debited for tuition</span><span style="font-weight:600">−USD 2,880.00</span></span><span></span><span style="display:flex;flex-direction:column"><span style="color:#4A5566">Arrival reserve, intact</span><span style="font-weight:600">USD 1,800.00</span></span></div>
+        <div style="display:grid;grid-template-columns:57.6fr 6.4fr 36fr;gap:3px;height:28px"><span style="background:rgba(74,85,102,.4);border-radius:2px 0 0 2px"></span><span style="background:#2346C8"></span><span style="background:repeating-linear-gradient(45deg,rgba(35,70,200,.35) 0 5px,rgba(35,70,200,.75) 5px 6.5px);border-radius:0 2px 2px 0"></span></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;line-height:18px"><span style="color:#4A5566">USD 320.00 free, beside the reserve</span><span style="font-weight:600">USD 2,120.00 left</span></div>
+      </div>
+      <div style="border:1.5px dashed #646D79;border-radius:2px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:16px">
+        <span style="display:flex;flex-direction:column"><span style="font-size:14px;font-weight:600">Scholarship</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Awarded, expected in about 60 days. Not counted until received.</span></span>
+        <span style="font-size:16px;font-weight:600;color:#4A5566"><span style="font-size:0.8em;font-weight:500;color:#646D79;margin-right:0.3em">CNY</span>20,000.00</span>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;gap:12px;align-items:baseline"><span style="font-size:13px;line-height:18px;font-weight:600">PermissionMeter</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">60 ticks for the period limit</span></div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px"><span style="font-size:14px;font-weight:600">Standing permission for arrival transfers</span><span style="font-size:13px;color:#4A5566;white-space:nowrap">USD 600.00 per 30 days</span></div>
+          <div style="display:flex;height:28px"><span style="width:174px;background:repeating-linear-gradient(90deg,#2346C8 0 2px,transparent 2px 6px)"></span><span style="flex:1;background:repeating-linear-gradient(90deg,#D5DAD7 0 2px,transparent 2px 6px)"></span></div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;line-height:18px"><span style="font-weight:600">USD 288.00 of USD 600.00 used this period</span><span style="color:#646D79">30 days left</span></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <span style="font-size:12px;font-weight:500;color:#646D79">With a second transfer of USD 432.00 held</span>
+          <div style="display:flex;height:28px;position:relative"><span style="width:174px;background:repeating-linear-gradient(90deg,#2346C8 0 2px,transparent 2px 6px)"></span><span style="flex:1;background:repeating-linear-gradient(90deg,#9A5B00 0 2px,transparent 2px 6px)"></span></div>
+          <div style="display:flex;gap:8px;font-size:13px;line-height:18px;color:#9A5B00;font-weight:600;align-items:center"><span style="width:14px;height:14px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/hourglass.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/hourglass.svg) center/contain no-repeat"></span>Would bring the period to USD 720.00. Carlos needs to approve this one.</div>
+        </div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;gap:12px;align-items:baseline"><span style="font-size:13px;line-height:18px;font-weight:600">CashProjection</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">USD, first weeks</span></div>
+        <div style="display:flex;flex-direction:column;font-size:14px;line-height:22px">
+          <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #D5DAD7"><span style="color:#4A5566">Balance after tuition</span><span style="font-weight:600"><span style="font-size:0.8em;font-weight:500;color:#646D79;margin-right:0.3em">USD</span>2,140.00</span></div>
+          <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #D5DAD7"><span style="color:#4A5566">Arrival expenses estimate</span><span style="font-weight:600">−<span style="font-size:0.8em;font-weight:500;color:#646D79;margin:0 0.3em 0 0.1em">USD</span>2,500.00</span></div>
+        </div>
+        <div style="display:grid;grid-template-columns:2140fr 360fr;gap:3px;height:20px"><span style="background:#2346C8;border-radius:2px 0 0 2px"></span><span style="border:1.5px dashed #9A5B00;background:#FBF0DC;border-radius:0 2px 2px 0"></span></div>
+        <div style="display:flex;align-items:center;gap:8px;font-size:16px;font-weight:600;color:#9A5B00"><span style="width:18px;height:18px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/triangle-alert.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/triangle-alert.svg) center/contain no-repeat"></span>Short by USD 360.00</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px">
+    <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;gap:12px;align-items:baseline"><span style="font-size:13px;line-height:18px;font-weight:600">ChatThread</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Agent unbubbled, user on route-tint</span></div>
+      <div style="align-self:flex-end;max-width:85%;background:#E8EDFB;border-radius:14px 14px 4px 14px;padding:10px 14px;font-size:15px;line-height:24px">Pay my tuition without touching the arrival reserve.</div>
+      <div style="display:flex;gap:8px;align-items:center;font-size:13px;color:#646D79;padding-left:36px"><span style="width:12px;height:12px;border-radius:50%;border:2px solid #D5DAD7;border-top-color:#646D79"></span>Checking quotes</div>
+      <div style="display:flex;gap:12px"><svg width="24" height="24" viewBox="0 0 32 32" style="flex:none;margin-top:2px"><path d="M8 28 V15 A8 8 0 0 1 24 15 V28" style="fill:none;stroke:#172231;stroke-width:4"></path><line x1="2" y1="28" x2="30" y2="28" style="stroke:#172231;stroke-width:2;stroke-linecap:round"></line><circle cx="16" cy="21" r="3.25" style="fill:#2346C8"></circle></svg><span style="font-size:15px;line-height:24px">Route B is the lowest cost that meets every rule. A, C and E don't work, and the board shows why.</span></div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px">
+        <span style="font-size:12px;font-weight:500;color:#646D79">SuggestionChips</span>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span style="display:flex;align-items:center;height:36px;padding:0 12px;border:1px solid #7D8794;border-radius:8px;font-size:14px">Has the university received my payment?</span>
+          <span style="display:flex;align-items:center;height:36px;padding:0 12px;border:1px solid #7D8794;border-radius:8px;font-size:14px">Will my money cover the first month?</span>
+        </div>
+      </div>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;gap:12px;align-items:baseline"><span style="font-size:13px;line-height:18px;font-weight:600">ApprovalRequestCard</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Action changes with the role</span></div>
+      <div style="border:1px solid #7D8794;border-radius:8px;padding:20px;display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:14px;font-weight:600">Tuition approval</span><span style="display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px 0 8px;border-radius:999px;background:#FBF0DC;color:#9A5B00;font-size:13px;font-weight:600;line-height:1"><span style="width:14px;height:14px;background:currentColor;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/hourglass.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/hourglass.svg) center/contain no-repeat"></span>Waiting for Carlos</span></div>
+        <div style="font-size:24px;line-height:30px;font-weight:600;letter-spacing:-0.005em"><span style="font-size:0.8em;font-weight:500;color:#646D79;margin-right:0.25em">USD</span>2,860.00</div>
+        <div style="font-size:14px;line-height:22px;color:#4A5566">Route B, arrives in about 24 h. University receives CNY 20,000.00.</div>
+        <div style="display:flex;gap:8px"><button style="height:40px;padding:0 16px;border:0;border-radius:8px;background:#2346C8;color:#FFFFFF;font:600 15px Overpass,sans-serif">Review and approve</button></div>
+      </div>
+      <span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Carlos's view. Sofía sees Request approval before sending.</span>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:20px">
+      <div style="display:flex;gap:12px;align-items:baseline"><span style="font-size:13px;line-height:18px;font-weight:600">BlockedNotice</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Stop for blocks, wait for limits</span></div>
+      <div style="background:#FBE7EA;border-radius:8px;padding:20px;display:flex;gap:14px">
+        <svg width="24" height="24" viewBox="0 0 24 24" style="flex:none"><polygon points="7,1 17,1 23,7 23,17 17,23 7,23 1,17 1,7" style="fill:#A8172B"></polygon><line x1="7" y1="12" x2="17" y2="12" style="stroke:#FFFFFF;stroke-width:2.6;stroke-linecap:round"></line></svg>
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:15px;line-height:22px;font-weight:600;color:#A8172B">Blocked: possible induced transfer</span><span style="font-size:14px;line-height:22px">Not the university's registered account. Payments go only to the account on the invoice, and approvals happen on Carlos's screen.</span><button style="align-self:flex-start;margin-top:6px;height:40px;padding:0 16px;border:1px solid #7D8794;border-radius:8px;background:#FFFFFF;color:#172231;font:600 15px Overpass,sans-serif">Show the current plan</button></div>
+      </div>
+      <div style="background:#FBF0DC;border-radius:8px;padding:16px 20px;display:flex;gap:14px">
+        <span style="width:20px;height:20px;flex:none;background:#9A5B00;-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/hourglass.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/hourglass.svg) center/contain no-repeat"></span>
+        <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:15px;line-height:22px;font-weight:600;color:#7A4700">Over this month's transfer limit</span><span style="font-size:14px;line-height:22px">USD 288.00 of USD 600.00 used. Carlos needs to approve this one.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#0E1521;border-radius:14px;padding:32px;display:grid;grid-template-columns:1fr 1.6fr 1fr;gap:32px;color:#E9EDF2">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:13px;line-height:18px;font-weight:600">FaultToggle</span>
+      <div style="background:#162030;border:1px solid #2A3648;border-radius:8px;padding:16px;display:flex;gap:14px;align-items:flex-start">
+        <span style="flex:none;margin-top:2px;width:36px;height:20px;border-radius:999px;background:#8FA8FF;position:relative"><span style="position:absolute;right:2px;top:2px;width:16px;height:16px;border-radius:50%;background:#0E1521"></span></span>
+        <div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;font-weight:600">Lose the next provider response</span><span style="font-size:12px;line-height:16px;font-weight:500;color:#AAB4C2">The payment will show as uncertain until checked</span></div>
+      </div>
+      <div style="background:#162030;border:1px solid #2A3648;border-radius:8px;padding:16px;display:flex;gap:14px;align-items:flex-start">
+        <span style="flex:none;margin-top:2px;width:36px;height:20px;border-radius:999px;background:#6B788A;position:relative"><span style="position:absolute;left:2px;top:2px;width:16px;height:16px;border-radius:50%;background:#0E1521"></span></span>
+        <div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;font-weight:600">Fail the next transfer</span></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:13px;line-height:18px;font-weight:600">EventLog</span>
+      <div style="border:1px solid #2A3648;border-radius:2px;font-family:'Overpass Mono',monospace;font-size:12px;line-height:16px">
+        <div style="display:grid;grid-template-columns:52px 104px 150px 1fr;gap:12px;padding:10px 14px;border-bottom:1px solid #2A3648;color:#8692A3;font-family:Overpass,sans-serif;font-weight:600;font-size:12px"><span>Time</span><span>Actor</span><span>Event</span><span>Detail</span></div>
+        <div style="display:grid;grid-template-columns:52px 104px 150px 1fr;gap:12px;padding:9px 14px;border-bottom:1px solid #2A3648"><span style="color:#AAB4C2">09:13</span><span>Provider</span><span style="color:#F0B44C">Response lost</span><span style="color:#AAB4C2">Payment marked uncertain</span></div>
+        <div style="display:grid;grid-template-columns:52px 104px 150px 1fr;gap:12px;padding:9px 14px;border-bottom:1px solid #2A3648"><span style="color:#AAB4C2">09:14</span><span>ArrivalGuard</span><span>Payment checked</span><span style="color:#AAB4C2">Accepted by provider, same payment</span></div>
+        <div style="display:grid;grid-template-columns:52px 104px 150px 1fr;gap:12px;padding:9px 14px"><span style="color:#AAB4C2">11:14</span><span>Arrival University</span><span style="color:#5FCB9C">Credited</span><span style="color:#AAB4C2">Receipt AU-RC-20931, CNY 20,000.00</span></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:13px;line-height:18px;font-weight:600">UsageMeter</span>
+      <div style="display:flex;height:24px"><span style="width:14%;background:repeating-linear-gradient(90deg,#8FA8FF 0 2px,transparent 2px 6px)"></span><span style="flex:1;background:repeating-linear-gradient(90deg,#2A3648 0 2px,transparent 2px 6px)"></span></div>
+      <span style="font-size:13px;line-height:18px;font-weight:600">USD 0.42 of USD 3.00 for this workspace</span>
+      <span style="font-size:12px;line-height:16px;font-weight:500;color:#8692A3">AI usage</span>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Icons" style="padding:64px 72px;border-bottom:1px solid #D5DAD7;display:grid;grid-template-columns:280px 1fr;gap:48px">
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <h2 style="margin:0;font-size:26px;line-height:32px;font-weight:600;letter-spacing:-0.01em">Icons</h2>
+    <p style="margin:0;font-size:14px;line-height:22px;color:#4A5566;text-wrap:pretty">Lucide at 1.75 stroke, 20 px in UI and 16 px inline. Three custom marks: the Threshold, the stop octagon for blocks, and the seal.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(8,1fr);gap:1px;background:#D5DAD7;border:1px solid #D5DAD7;border-radius:2px;overflow:hidden">
+    <sc-for list="{{ icons }}" as="i" hint-placeholder-count="16">
+      <div style="background:#FFFFFF;height:104px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px"><span style="width:20px;height:20px;background:#172231;-webkit-mask:{{ i.mask }};mask:{{ i.mask }}"></span><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">{{ i.label }}</span></div>
+    </sc-for>
+    <div style="background:#FFFFFF;height:104px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px"><svg width="20" height="20" viewBox="0 0 32 32"><path d="M8 28 V15 A8 8 0 0 1 24 15 V28" style="fill:none;stroke:#172231;stroke-width:4"></path><line x1="2" y1="28" x2="30" y2="28" style="stroke:#172231;stroke-width:2;stroke-linecap:round"></line><circle cx="16" cy="21" r="3.25" style="fill:#2346C8"></circle></svg><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Threshold</span></div>
+    <div style="background:#FFFFFF;height:104px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px"><svg width="20" height="20" viewBox="0 0 24 24"><polygon points="7,1 17,1 23,7 23,17 17,23 7,23 1,17 1,7" style="fill:#A8172B"></polygon><line x1="7" y1="12" x2="17" y2="12" style="stroke:#FFFFFF;stroke-width:2.6;stroke-linecap:round"></line></svg><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Octagon, filled</span></div>
+    <div style="background:#FFFFFF;height:104px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px"><svg width="16" height="16" viewBox="0 0 24 24"><polygon points="7.5,2 16.5,2 22,7.5 22,16.5 16.5,22 7.5,22 2,16.5 2,7.5" style="fill:none;stroke:#A8172B;stroke-width:2.4;stroke-linejoin:round"></polygon><line x1="8" y1="12" x2="16" y2="12" style="stroke:#A8172B;stroke-width:2.4;stroke-linecap:round"></line></svg><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Octagon, 16 px outline</span></div>
+    <div style="background:#FFFFFF;height:104px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px"><svg width="20" height="20" viewBox="0 0 14 14"><rect x="1" y="1" width="12" height="12" rx="2" style="fill:none;stroke:#D2412B;stroke-width:1.6"></rect><rect x="4" y="4" width="2.2" height="2.2" style="fill:#D2412B"></rect><rect x="7.8" y="4" width="2.2" height="2.2" style="fill:#D2412B"></rect><rect x="4" y="7.8" width="2.2" height="2.2" style="fill:#D2412B"></rect><rect x="7.8" y="7.8" width="2.2" height="2.2" style="fill:#D2412B"></rect></svg><span style="font-size:12px;line-height:16px;font-weight:500;color:#646D79">Mini seal</span></div>
+  </div>
+</section>
+
+<section data-screen-label="Do and don't" style="padding:64px 72px;display:grid;grid-template-columns:280px 1fr;gap:48px">
+  <div style="display:flex;flex-direction:column;gap:12px">
+    <h2 style="margin:0;font-size:26px;line-height:32px;font-weight:600;letter-spacing:-0.01em">Do and don't</h2>
+    <p style="margin:0;font-size:14px;line-height:22px;color:#4A5566;text-wrap:pretty">No shields, padlocks, sparkles, robots, mascots, 3D coins, glows or decorative gradients anywhere.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:2px;height:92px;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:600">−<span style="font-size:0.8em;font-weight:500;color:#646D79;margin:0 0.25em 0 0.1em">USD</span>2,880.00</div>
+      <span style="font-size:12px;line-height:16px;font-weight:600;color:#12734F">Do: debits in ink with a minus</span>
+      <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:2px;height:92px;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:600;color:#E02020">-$2880</div>
+      <span style="font-size:12px;line-height:16px;font-weight:600;color:#A8172B">Don't: red debits, no ISO code</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:2px;height:92px;display:flex;align-items:center;justify-content:center"><button style="height:40px;padding:0 16px;border:0;border-radius:8px;background:#2346C8;color:#FFFFFF;font:600 15px Overpass,sans-serif">Send payment</button></div>
+      <span style="font-size:12px;line-height:16px;font-weight:600;color:#12734F">Do: a plain verb, sentence case</span>
+      <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:2px;height:92px;display:flex;align-items:center;justify-content:center"><button style="height:40px;padding:0 20px;border:0;border-radius:999px;background:linear-gradient(90deg,#7B4CFF,#2EC5FF);color:#FFFFFF;font:700 13px Overpass,sans-serif;letter-spacing:0.08em">SEND NOW →</button></div>
+      <span style="font-size:12px;line-height:16px;font-weight:600;color:#A8172B">Don't: caps, arrows, gradients</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:2px;height:92px;display:flex;flex-direction:column;justify-content:center;padding:0 16px;color:#4A5566"><span style="font-size:14px;line-height:20px;font-weight:600;color:#172231">Arrives too late</span><span style="font-size:13px;line-height:20px">Takes 72 h. You need it within 48 h.</span></div>
+      <span style="font-size:12px;line-height:16px;font-weight:600;color:#12734F">Do: the reason in the row</span>
+      <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:2px;height:92px;display:flex;align-items:center;justify-content:center;gap:6px;font-size:14px;color:#646D79">Rejected <span style="width:16px;height:16px;border-radius:50%;border:1.5px solid #646D79;font-size:10px;display:flex;align-items:center;justify-content:center">i</span></div>
+      <span style="font-size:12px;line-height:16px;font-weight:600;color:#A8172B">Don't: hide it in a tooltip</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:2px;height:92px;display:flex;flex-direction:column;justify-content:center;padding:0 16px;gap:2px"><span style="font-size:13px;font-weight:600;color:#4A5566">Tuition invoice</span><span style="font-size:14px;color:#172231">Due in 48 h</span></div>
+      <span style="font-size:12px;line-height:16px;font-weight:600;color:#12734F">Do: sentence-case labels</span>
+      <div style="background:#FFFFFF;border:1px solid #D5DAD7;border-radius:2px;height:92px;display:flex;align-items:center;padding:0 16px;font-family:'Overpass Mono',monospace;font-size:11px;letter-spacing:0.1em;color:#646D79">TUITION · AG-01 · DUE 48H</div>
+      <span style="font-size:12px;line-height:16px;font-weight:600;color:#A8172B">Don't: caps, middots, mono as decor</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="background:#F1F3F2;border:1px solid #D5DAD7;border-radius:2px;height:92px;display:flex;align-items:center;padding:0 16px;gap:10px"><div style="flex:1;background:#FFFFFF;border:1px solid #D5DAD7;border-radius:2px;height:52px"></div><div style="flex:1;background:#FFFFFF;border:1px solid #D5DAD7;border-radius:14px;height:52px"></div></div>
+      <span style="font-size:12px;line-height:16px;font-weight:600;color:#12734F">Do: border, background, space</span>
+      <div style="background:#0B0D0C;border-radius:2px;height:92px;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;color:#C6FF3D;text-shadow:0 0 14px rgba(198,255,61,.7)">+24.8%</div>
+      <span style="font-size:12px;line-height:16px;font-weight:600;color:#A8172B">Don't: neon on near-black, glows</span>
+    </div>
+  </div>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const cell = (d, x, y) => {
+      const g = d >> 2, r = d % 4, cx = x + 8, cy = y + 8;
+      const c = [1, 0, -1, 0][r], s = [0, 1, 0, -1][r];
+      const P = (px, py) => { const dx = x + px - cx, dy = y + py - cy; return `${+(cx + dx * c - dy * s).toFixed(2)} ${+(cy + dx * s + dy * c).toFixed(2)}`; };
+      if (g === 0) return `M${P(3, 8)} L${P(13, 8)}`;
+      if (g === 1) return `M${P(3, 3)} L${P(3, 13)} L${P(13, 13)}`;
+      if (g === 2) return `M${P(5, 8)} l0.01 0 M${P(11, 8)} l0.01 0`;
+      return `M${P(8, 4)} L${P(8, 12)} M${P(4, 8)} L${P(12, 8)}`;
+    };
+    const seal = hex => hex.slice(0, 16).split('').map((h, i) => cell(parseInt(h, 16), 12 + (i % 4) * 18, 12 + Math.floor(i / 4) * 18)).join(' ');
+    const fpA = '3f9a21c7e04b88d1', fpB = 'b7710e2a9c4f5d63';
+    let gridPath = '';
+    for (let i = 0; i < 16; i++) { const x = 12 + (i % 4) * 18, y = 12 + Math.floor(i / 4) * 18; gridPath += `M${x} ${y} h16 v16 h-16 Z `; }
+    const names = ['Bar', 'Corner', 'Double dot', 'Short cross'];
+    const glyphKey = Array.from({ length: 16 }, (_, d) => ({ d: cell(d, 0, 0), hex: d.toString(16).toUpperCase(), name: names[d >> 2], rot: (d % 4) * 90 + '°' }));
+
+    const lum = h => { const n = [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16) / 255).map(c => c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)); return 0.2126 * n[0] + 0.7152 * n[1] + 0.0722 * n[2]; };
+    const cr = (a, b) => { const x = lum(a), y = lum(b); return ((Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05)).toFixed(1) + ':1'; };
+    const L = { surface: '#FFFFFF', ink: '#172231' };
+    const lt = [
+      ['paper', '#F1F3F2', 'App background', 'ink on it', '#172231', '#F1F3F2'],
+      ['surface', '#FFFFFF', 'Panels, documents, fields', 'ink on it', '#172231', '#FFFFFF'],
+      ['ink', '#172231', 'Primary text, logo', 'on surface'],
+      ['ink-2', '#4A5566', 'Secondary text', 'on surface'],
+      ['muted', '#646D79', 'Help, provenance', 'on surface'],
+      ['line', '#D5DAD7', 'Non-essential dividers', null],
+      ['line-strong', '#7D8794', 'Field and control borders', 'on surface, UI'],
+      ['route', '#2346C8', 'Press it, or the money\u2019s route', 'on surface'],
+      ['route-tint', '#E8EDFB', 'Selection, user bubble', 'route on it', '#2346C8', '#E8EDFB'],
+      ['arrive', '#12734F', 'Credited, delivered, refunded', 'on surface'],
+      ['arrive-tint', '#E3F2EB', 'Arrival states', 'arrive on it', '#12734F', '#E3F2EB'],
+      ['wait', '#9A5B00', 'Waiting, uncertain, pending', 'on surface'],
+      ['wait-tint', '#FBF0DC', 'Waiting states', 'wait on it', '#9A5B00', '#FBF0DC'],
+      ['stop', '#A8172B', 'Blocked, declined', 'on surface'],
+      ['stop-tint', '#FBE7EA', 'Blocks', 'stop on it', '#A8172B', '#FBE7EA'],
+      ['seal', '#D2412B', 'The consent seal only', 'on surface']
+    ];
+    const lightTokens = lt.map(([name, hex, use, lab, fg, bg]) => ({ name, hex, use, ratio: lab === null ? 'Decorative only' : `${cr(fg || hex, bg || L.surface)} ${lab}` }));
+    const DS = '#162030';
+    const dk = [['paper', '#0E1521', 1], ['surface', '#162030', 1], ['ink', '#E9EDF2'], ['ink-2', '#AAB4C2'], ['muted', '#8692A3'], ['line', '#2A3648', 2], ['line-strong', '#6B788A'], ['route', '#8FA8FF'], ['arrive', '#5FCB9C'], ['wait', '#F0B44C'], ['stop', '#FF8A92'], ['seal', '#F06A52']];
+    const darkTokens = dk.map(([name, hex, k]) => ({ name, hex, ratio: k === 1 ? `${cr('#E9EDF2', hex)} ink on it` : k === 2 ? 'Decorative only' : `${cr(hex, DS)} on surface` }));
+    const ic = ['circle-dashed', 'route', 'hourglass', 'send', 'refresh-cw', 'check-check', 'landmark', 'badge-check', 'circle-slash', 'undo-2', 'file-text', 'triangle-alert', 'clock', 'download', 'chevron-down', 'x'];
+    const icons = ic.map(n => ({ label: n, mask: `url(${(window.__resources && window.__resources['ic_' + n.replace(/-/g, '_')]) || `https://unpkg.com/lucide-static@0.469.0/icons/${n}.svg`}) center/contain no-repeat` }));
+    return { sealA: seal(fpA), sealB: seal(fpB), gridPath, digitsA: fpA.toUpperCase().split(''), glyphKey, lightTokens, darkTokens, icons };
+  }
+}
+</script>
+</body>
+</html>

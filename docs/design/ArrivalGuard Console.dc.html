@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;500;600;700&amp;family=Overpass+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"><style>html,body{margin:0;height:100%;background:#0E1521}*{box-sizing:border-box}button{font-family:inherit}a{color:#8FA8FF}a:hover{color:#A9BCFF}</style></helmet>
+<div data-screen-label="D13 Evaluator console" style="height:100%;min-height:900px;display:flex;flex-direction:column;background:#0E1521;color:#E9EDF2;font-family:Overpass,system-ui,sans-serif;font-variant-numeric:tabular-nums lining-nums;-webkit-font-smoothing:antialiased;overflow:hidden">
+<div style="flex:none;height:64px;background:#162030;border-top:3px solid #E9EDF2;border-bottom:1px solid #2A3648;display:flex;align-items:center;gap:20px;padding:0 32px">
+  <div style="flex:none;white-space:nowrap;line-height:1;font-size:20px;font-weight:700;letter-spacing:-0.01em"><svg width="28" height="28" viewBox="0 0 32 32" style="vertical-align:-3.5px;margin-right:10.5px"><path d="M8 28 V15 A8 8 0 0 1 24 15 V28" style="fill:none;stroke:#E9EDF2;stroke-width:4"></path><line x1="2" y1="28" x2="30" y2="28" style="stroke:#E9EDF2;stroke-width:2;stroke-linecap:round"></line><circle cx="16" cy="21" r="3.25" style="fill:#8FA8FF"></circle></svg>ArrivalGuard</div>
+  <span style="width:1px;height:24px;background:#2A3648"></span>
+  <span style="font-size:14px;color:#AAB4C2;white-space:nowrap">Evaluator console</span>
+  <div style="margin-left:auto;flex:none;white-space:nowrap;display:flex;align-items:baseline;gap:8px"><span style="font-size:15px;font-weight:600">Tue 20 Oct, {{ clock }}</span><span style="font-size:12px;font-weight:500;color:#8692A3">virtual time</span><span style="font-size:12px;font-weight:600;color:#AAB4C2;padding:2px 7px;border:1px solid #2A3648;border-radius:999px">{{ off }}</span></div>
+  <div style="flex:none;white-space:nowrap;display:flex;gap:2px;padding:3px;background:#0E1521;border:1px solid #2A3648;border-radius:10px">
+    <a href="ArrivalGuard Prototype.dc.html" style="display:flex;align-items:center;gap:8px;height:36px;padding:0 12px 0 6px;border-radius:8px;color:#AAB4C2;text-decoration:none"><span style="width:24px;height:24px;border-radius:50%;background:#27334D;color:#E9EDF2;border:1px solid #2A3648;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;padding-top:1px">SR</span><span style="font-size:14px;font-weight:600;padding-top:2px">Sofía<span style="font-weight:400">, student</span></span></a>
+    <a href="ArrivalGuard Prototype.dc.html" style="display:flex;align-items:center;gap:8px;height:36px;padding:0 12px 0 6px;border-radius:8px;color:#AAB4C2;text-decoration:none"><span style="width:24px;height:24px;border-radius:50%;background:#162030;color:#E9EDF2;border:1px solid #2A3648;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;padding-top:1px">CR</span><span style="font-size:14px;font-weight:600;padding-top:2px">Carlos<span style="font-weight:400">, payer</span></span></a>
+    <span style="display:flex;align-items:center;gap:8px;height:36px;padding:0 12px 0 6px;background:#162030;border:1px solid #6B788A;border-radius:8px"><span style="width:24px;height:24px;border-radius:50%;background:#E9EDF2;color:#0E1521;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;padding-top:1px">EV</span><span style="font-size:14px;font-weight:600;padding-top:2px">Evaluator</span></span>
+  </div>
+</div>
+<div style="flex:none;height:32px;display:flex;align-items:center;gap:12px;padding:0 32px;background:#121B29;border-bottom:1px solid #2A3648"><span style="flex:none;width:28px;height:12px;border-radius:1px;background:repeating-linear-gradient(-45deg,#E9EDF2 0 3px,#0E1521 3px 6px)"></span><span style="font-size:13px;line-height:18px;font-weight:500;white-space:nowrap;padding-top:2px">Simulated funds and a fictional university. No real money moves.</span></div>
+
+<div style="flex:1;min-height:0;width:100%;max-width:1344px;margin:0 auto;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px;padding:24px 32px">
+  <div style="min-height:0;overflow:auto;display:flex;flex-direction:column;gap:16px">
+    <div style="background:#162030;border:1px solid #2A3648;border-radius:14px;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px">
+      <div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:13px;font-weight:600;color:#AAB4C2">Scenario</span><span style="font-size:20px;line-height:26px;font-weight:600">Base payment</span><span style="font-size:13px;line-height:20px;color:#AAB4C2">Tuition of CNY 20,000.00 to Arrival University</span></div>
+      <button style="flex:none;height:40px;padding:2px 16px 0;border:1px solid #6B788A;border-radius:8px;background:#162030;color:#E9EDF2;font-size:15px;font-weight:600;cursor:pointer" style-hover="border-color:#E9EDF2">Start new workspace</button>
+    </div>
+    <div style="background:#162030;border:1px solid #2A3648;border-radius:14px;padding:20px 24px;display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:13px;font-weight:600;color:#AAB4C2">Virtual time</span>
+      <div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:40px;line-height:44px;font-weight:600;letter-spacing:-0.01em;white-space:nowrap">Tue 20 Oct, {{ clock }}</span><span style="font-size:13px;font-weight:500;color:#8692A3">{{ off }} from start</span></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4"><button onClick="{{ s.on }}" style="height:40px;padding:2px 14px 0;border:1px solid #6B788A;border-radius:8px;background:#162030;color:#E9EDF2;font-size:15px;font-weight:600;cursor:pointer" style-hover="border-color:#E9EDF2" style-focus="outline:2px solid #8FA8FF;outline-offset:2px">{{ s.t }}</button></sc-for>
+        <button style="height:40px;padding:2px 14px 0;border:0;background:transparent;color:#8FA8FF;font-size:15px;font-weight:600;cursor:pointer">Custom</button>
+      </div>
+      <sc-if value="{{ moved }}"><span style="font-size:12px;line-height:16px;font-weight:500;color:#8692A3">{{ moved }}</span></sc-if>
+    </div>
+    <div style="background:#162030;border:1px solid #2A3648;border-radius:14px;padding:20px 24px 8px;display:flex;flex-direction:column">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px"><span style="font-size:13px;font-weight:600;color:#AAB4C2">Faults</span><span style="font-size:12px;font-weight:500;color:#8692A3">{{ faultCount }}</span></div>
+      <sc-for list="{{ faults }}" as="f" hint-placeholder-count="8">
+        <button onClick="{{ f.on }}" style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border:0;border-top:1px solid #2A3648;background:transparent;color:#E9EDF2;text-align:left;cursor:pointer;width:100%">
+          <span style="flex:none;margin-top:1px;width:36px;height:20px;border-radius:999px;background:{{ f.track }};position:relative;transition:background 150ms"><span style="position:absolute;top:2px;left:{{ f.knob }};width:16px;height:16px;border-radius:50%;background:#0E1521;transition:left 150ms"></span></span>
+          <span style="display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;line-height:20px;font-weight:600">{{ f.t }}</span><span style="font-size:12px;line-height:16px;font-weight:500;color:{{ f.dc }}">{{ f.d }}</span></span>
+        </button>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="min-height:0;display:flex;flex-direction:column;gap:16px">
+    <div style="flex:1;min-height:0;background:#162030;border:1px solid #2A3648;border-radius:14px;display:flex;flex-direction:column;overflow:hidden">
+      <div style="flex:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 20px">
+        <span style="font-size:20px;line-height:26px;font-weight:600">Event log</span>
+        <div style="display:flex;gap:6px">
+          <sc-for list="{{ filters }}" as="x" hint-placeholder-count="5"><button onClick="{{ x.on }}" style="height:32px;padding:2px 12px 0;border-radius:8px;border:1px solid {{ x.bd }};background:{{ x.bg }};color:#E9EDF2;font-size:13px;font-weight:600;cursor:pointer">{{ x.t }}</button></sc-for>
+        </div>
+      </div>
+      <div style="flex:none;display:grid;grid-template-columns:56px 132px 150px minmax(0,1fr);gap:12px;padding:10px 20px;border-top:1px solid #2A3648;border-bottom:1px solid #2A3648;font-size:12px;font-weight:600;color:#8692A3"><span>Virtual time</span><span>Actor</span><span>Event</span><span>Detail</span></div>
+      <div style="flex:1;min-height:0;overflow:auto;font-family:'Overpass Mono',monospace;font-size:12px;line-height:18px">
+        <sc-for list="{{ log }}" as="e" hint-placeholder-count="11">
+          <div style="display:grid;grid-template-columns:56px 132px 150px minmax(0,1fr);gap:12px;padding:9px 20px;border-bottom:1px solid #2A3648">
+            <span style="color:#AAB4C2">{{ e.t }}</span><span>{{ e.a }}</span>
+            <span style="display:flex;gap:6px;align-items:flex-start;color:{{ e.c }}"><sc-if value="{{ e.blk }}"><svg width="14" height="14" viewBox="0 0 24 24" style="flex:none;margin-top:2px"><polygon points="7.5,2 16.5,2 22,7.5 22,16.5 16.5,22 7.5,22 2,16.5 2,7.5" style="fill:none;stroke:#FF8A92;stroke-width:2.4;stroke-linejoin:round"></polygon><line x1="8" y1="12" x2="16" y2="12" style="stroke:#FF8A92;stroke-width:2.4;stroke-linecap:round"></line></svg></sc-if>{{ e.e }}</span>
+            <span style="color:#AAB4C2">{{ e.d }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="flex:none;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:16px">
+      <div style="background:#162030;border:1px solid #2A3648;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:12px">
+        <span style="font-size:13px;font-weight:600;color:#AAB4C2">AI usage</span>
+        <div style="display:flex;height:24px"><span style="width:14%;background:repeating-linear-gradient(90deg,#8FA8FF 0 2px,transparent 2px 6px)"></span><span style="flex:1;background:repeating-linear-gradient(90deg,#2A3648 0 2px,transparent 2px 6px)"></span></div>
+        <span style="font-size:14px;line-height:20px;font-weight:600">USD 0.42 of USD 3.00 for this workspace</span>
+      </div>
+      <div style="background:#162030;border:1px solid #2A3648;border-radius:14px;padding:16px 20px;display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:13px;font-weight:600;color:#AAB4C2">Scripted tasks</span><button style="height:32px;padding:2px 12px 0;border:0;border-radius:8px;background:#8FA8FF;color:#0E1521;font-size:13px;font-weight:600;cursor:pointer">Run T1 to T8</button></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;column-gap:20px">
+          <sc-for list="{{ tasks }}" as="t" hint-placeholder-count="8"><div style="display:flex;justify-content:space-between;padding:5px 0;border-top:1px solid #2A3648;font-size:13px;line-height:18px"><span style="font-family:'Overpass Mono',monospace">{{ t }}</span><span style="color:#8692A3">Not run yet</span></div></sc-for>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const LOG = [
+  ['09:02', 'Sofía', 'Plan created', 'Route B, USD 2,860.00', 'pay'],
+  ['09:04', 'Sofía', 'Approval requested', 'Plan version 1', 'appr'],
+  ['09:07', 'Carlos', 'Approval granted', 'Seal 3F9A 21C7', 'appr'],
+  ['09:09', 'Sofía', 'Plan changed', 'Within 6 h, route D. Approval 1 no longer matches', 'pay'],
+  ['09:12', 'Carlos', 'Approval granted', 'Seal B771 0E2A', 'appr'],
+  ['09:13', 'Evaluator', 'Fault injected', 'Lose the next provider response', 'clock'],
+  ['09:13', 'ArrivalGuard', 'Payment sent', 'USD 2,880.00 held', 'pay'],
+  ['09:13', 'Provider', 'Response lost', 'Payment marked uncertain', 'pay'],
+  ['09:14', 'ArrivalGuard', 'Payment checked', 'Accepted by provider, same payment', 'pay'],
+  ['09:20', 'Sofía', 'Security block', 'Induced transfer: new account rejected', 'sec'],
+  ['11:14', 'Arrival University', 'Credited', 'Receipt AU-RC-20931, CNY 20,000.00', 'pay']
+];
+const FAULTS = [
+  ['Lose the next provider response', 'The payment will show as uncertain until checked'],
+  ['Fail the next transfer', 'The next transfer fails and no money leaves the account'],
+  ["Delay the university's credit", 'The payment waits at the university until time moves on'],
+  ['Raise the refreshed price above the limit', 'A refreshed price will exceed the tuition limit'],
+  ['Repeat the next provider event', 'The provider sends the same event twice'],
+  ['Inject text into the next quote', 'The next quote carries text that tries to give instructions'],
+  ['Inject text into the university notice', 'The next university notice carries injected text'],
+  ['Make the assistant unavailable', 'Sofía and Carlos switch to structured controls']
+];
+const pad = n => String(n).padStart(2, '0');
+class Component extends DCLogic {
+  state = { mins: 134, faults: [true, false, false, false, false, false, false, false], filter: 'All', moved: null };
+  renderVals() {
+    const s = this.state, m = s.mins, h = 9 + Math.floor(m / 60);
+    const clock = h < 24 ? `${pad(h)}:${pad(m % 60)}` : `${pad(h - 24)}:${pad(m % 60)}`;
+    const off = `+${Math.floor(m / 60)} h${m % 60 ? ' ' + (m % 60) + ' min' : ''}`;
+    const steps = [['Advance 1 hour', 60], ['6 hours', 360], ['24 hours', 1440], ['72 hours', 4320]].map(([t, d]) => ({ t, on: () => this.setState(st => { const nm = st.mins + d; const hh = 9 + Math.floor(nm / 60); return { mins: nm, moved: d === 360 ? 'Virtual time moved to Tue 20 Oct, 15:00' : `Virtual time moved by ${t.replace('Advance ', '')}` }; }) }));
+    const faults = FAULTS.map(([t, d], i) => ({ t, d, dc: s.faults[i] ? '#F0B44C' : '#8692A3', track: s.faults[i] ? '#8FA8FF' : '#6B788A', knob: s.faults[i] ? '18px' : '2px', on: () => this.setState(st => { const f = st.faults.slice(); f[i] = !f[i]; return { faults: f }; }) }));
+    const fmap = { All: null, Payments: 'pay', Approvals: 'appr', Security: 'sec', 'Clock and faults': 'clock' };
+    const filters = Object.keys(fmap).map(t => ({ t, bg: s.filter === t ? '#27334D' : 'transparent', bd: s.filter === t ? '#8FA8FF' : '#2A3648', on: () => this.setState({ filter: t }) }));
+    const log = LOG.filter(e => !fmap[s.filter] || e[4] === fmap[s.filter]).map(e => ({ t: e[0], a: e[1], e: e[2], d: e[3], blk: e[4] === 'sec', c: e[4] === 'sec' ? '#FF8A92' : e[2] === 'Response lost' ? '#F0B44C' : e[2] === 'Credited' ? '#5FCB9C' : '#E9EDF2' }));
+    const on = s.faults.filter(Boolean).length;
+    return { clock, off, steps, faults, faultCount: `${on} active`, filters, log, moved: s.moved, tasks: ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8'] };
+  }
+}
+</script>
+</body>
+</html>

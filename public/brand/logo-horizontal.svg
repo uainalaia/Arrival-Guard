@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="188" height="40" viewBox="0 0 188 40" fill="none" role="img" aria-label="ArrivalGuard">
+  <g transform="translate(0 2) scale(1.125)">
+    <path d="M8 28 V15 A8 8 0 0 1 24 15 V28" stroke="#172231" stroke-width="4" fill="none"/>
+    <line x1="2" y1="28" x2="30" y2="28" stroke="#172231" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="16" cy="21" r="3.25" fill="#2346C8"/>
+  </g>
+  <text x="49.5" y="33.5" fill="#172231" font-family="Overpass, ui-sans-serif, system-ui, sans-serif" font-size="26" font-weight="700" letter-spacing="-0.26">ArrivalGuard</text>
+</svg>

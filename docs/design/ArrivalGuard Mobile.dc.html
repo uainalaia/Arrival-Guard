@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;500;600;700&amp;family=Overpass+Mono:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&amp;display=swap" rel="stylesheet"><style>html,body{margin:0}body{--paper:#F1F3F2;--surface:#FFFFFF;--ink:#172231;--ink2:#4A5566;--muted:#646D79;--line:#D5DAD7;--line-strong:#7D8794;--route:#2346C8;--route-hover:#1C3AAD;--on-route:#FFFFFF;--route-tint:#E8EDFB;--arrive:#12734F;--arrive-tint:#E3F2EB;--wait:#9A5B00;--wait-tint:#FBF0DC;--stop:#A8172B;--stop-tint:#FBE7EA;--seal:#D2412B}*{box-sizing:border-box}button{font-family:inherit}a{color:var(--route)}@keyframes agDrift{from{background-position:0 0}to{background-position:0 20px}}@media (prefers-reduced-motion:reduce){*{animation:none!important}}</style></helmet>
+<div data-screen-label="{{ label }}" style="width:390px;height:844px;display:flex;flex-direction:column;background:var(--paper);color:var(--ink);font-family:Overpass,system-ui,sans-serif;font-variant-numeric:tabular-nums lining-nums;-webkit-font-smoothing:antialiased;overflow:hidden">
+  <div style="flex:none;height:56px;background:var(--surface);border-top:3px solid {{ topBorder }};border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px;padding:0 16px">
+    <svg width="24" height="24" viewBox="0 0 32 32" style="flex:none"><path d="M8 28 V15 A8 8 0 0 1 24 15 V28" style="fill:none;stroke:var(--ink);stroke-width:4"></path><line x1="2" y1="28" x2="30" y2="28" style="stroke:var(--ink);stroke-width:2;stroke-linecap:round"></line><circle cx="16" cy="21" r="3.25" style="fill:var(--route)"></circle></svg>
+    <div style="flex:1;display:flex;flex-direction:column;line-height:1.1;padding-top:3px"><span style="font-size:14px;font-weight:600">Tue 20 Oct, {{ time }}</span><span style="font-size:11px;font-weight:500;color:var(--muted)">virtual time, {{ off }}</span></div>
+    <button style="flex:none;display:flex;align-items:center;gap:8px;height:44px;padding:0 10px 0 6px;border:1px solid var(--line-strong);border-radius:8px;background:var(--surface);color:var(--ink)"><span style="width:28px;height:28px;border-radius:50%;background:{{ av }};border:1px solid var(--line);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;padding-top:1px">{{ ini }}</span><span style="font-size:14px;font-weight:600;padding-top:2px">{{ who }}</span><span style="width:14px;height:14px;background:var(--ink2);-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/chevron-down.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/chevron-down.svg) center/contain no-repeat"></span></button>
+  </div>
+  <div style="flex:none;height:28px;display:flex;align-items:center;gap:10px;padding:0 16px;background:color-mix(in srgb,var(--paper) 70%,var(--line));border-bottom:1px solid var(--line)"><span style="flex:none;width:22px;height:10px;border-radius:1px;background:repeating-linear-gradient(-45deg,var(--ink) 0 3px,var(--paper) 3px 6px)"></span><span style="font-size:12px;line-height:16px;font-weight:500;white-space:nowrap;padding-top:2px">Simulated funds. No real money moves.</span></div>
+
+  <sc-if value="{{ m1 }}">
+    <div style="flex:1;min-height:0;display:flex;flex-direction:column;background:var(--surface)">
+      <div ref="{{ scrollRef }}" style="flex:1;min-height:0;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;justify-content:flex-end"><div style="max-width:85%;background:var(--route-tint);border-radius:14px 14px 4px 14px;padding:10px 14px 8px;font-size:15px;line-height:24px">Pay my tuition without touching the arrival reserve.</div></div>
+        <div style="display:flex;gap:10px"><svg width="22" height="22" viewBox="0 0 32 32" style="flex:none;margin-top:1px"><path d="M8 28 V15 A8 8 0 0 1 24 15 V28" style="fill:none;stroke:var(--ink);stroke-width:4"></path><line x1="2" y1="28" x2="30" y2="28" style="stroke:var(--ink);stroke-width:2;stroke-linecap:round"></line><circle cx="16" cy="21" r="3.25" style="fill:var(--route)"></circle></svg><span style="font-size:15px;line-height:24px">I have the amount and the university. When must it arrive?</span></div>
+        <div style="display:flex;justify-content:flex-end"><div style="max-width:85%;background:var(--route-tint);border-radius:14px 14px 4px 14px;padding:10px 14px 8px;font-size:15px;line-height:24px">Within 48 hours.</div></div>
+        <div style="display:flex;gap:8px;align-items:center;font-size:13px;color:var(--muted);padding-left:32px"><span style="width:12px;height:12px;border-radius:50%;border:2px solid var(--line);border-top-color:var(--muted)"></span><span style="padding-top:2px">Checking quotes</span></div>
+        <div style="display:flex;gap:10px"><svg width="22" height="22" viewBox="0 0 32 32" style="flex:none;margin-top:1px"><path d="M8 28 V15 A8 8 0 0 1 24 15 V28" style="fill:none;stroke:var(--ink);stroke-width:4"></path><line x1="2" y1="28" x2="30" y2="28" style="stroke:var(--ink);stroke-width:2;stroke-linecap:round"></line><circle cx="16" cy="21" r="3.25" style="fill:var(--route)"></circle></svg><span style="font-size:15px;line-height:24px">Route B is the lowest cost that meets every rule. A, C and E don't work, and the board shows why.</span></div>
+        <div style="border:1px solid var(--line-strong);border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="font-size:13px;font-weight:600;color:var(--ink2)">Plan version 1</span><dc-import name="AG Pill" kind="plan" hint-size="96px,26px"></dc-import></div>
+          <span style="font-size:24px;line-height:30px;font-weight:600"><span style="font-size:0.8em;font-weight:500;color:var(--muted);margin-right:0.25em">USD</span>2,860.00</span>
+          <span style="font-size:14px;line-height:22px;color:var(--ink2)">Route B, Edu Pay Partner, arrives in about 24 h. University receives CNY 20,000.00.</span>
+          <div style="display:flex;flex-direction:column;border-top:1px solid var(--line);margin-top:4px">
+            <div style="display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--line);font-size:13px;line-height:18px"><span style="font-weight:600">A</span><span style="flex:1;color:var(--ink2)">Arrives too late. Takes 72 h. You need it within 48 h.</span></div>
+            <div style="display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--line);font-size:13px;line-height:18px"><span style="font-weight:600">C</span><span style="flex:1;color:var(--ink2)">University would receive less. Delivers CNY 19,800.00. The invoice is CNY 20,000.00.</span></div>
+            <div style="display:flex;justify-content:space-between;gap:12px;padding:8px 0;font-size:13px;line-height:18px"><span style="font-weight:600">E</span><span style="flex:1;color:var(--ink2)">Not the university's registered account. Payments go only to the account on the invoice.</span></div>
+          </div>
+          <button style="height:44px;border:0;border-radius:8px;background:var(--route);color:var(--on-route);font-size:15px;font-weight:600;padding-top:2px">Request approval</button>
+        </div>
+      </div>
+      <div style="flex:none;padding:10px 16px;border-top:1px solid var(--line);display:flex;gap:8px"><div style="flex:1;height:44px;border:1px solid var(--line-strong);border-radius:8px;display:flex;align-items:center;padding:2px 14px 0;font-size:15px;color:var(--muted)">Ask ArrivalGuard</div><button aria-label="Send message" style="flex:none;width:44px;height:44px;border:1px solid var(--line-strong);border-radius:8px;background:var(--surface);display:flex;align-items:center;justify-content:center"><span style="width:18px;height:18px;background:var(--route);-webkit-mask:url(https://unpkg.com/lucide-static@0.469.0/icons/send.svg) center/contain no-repeat;mask:url(https://unpkg.com/lucide-static@0.469.0/icons/send.svg) center/contain no-repeat"></span></button></div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ m2 }}">
+    <div style="flex:1;min-height:0;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:12px">
+      <div style="background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:2px">
+        <span style="font-size:13px;font-weight:600;color:var(--ink2)">Tuition invoice, AG-STUDENT-01</span>
+        <span style="font-size:32px;line-height:38px;font-weight:600;letter-spacing:-0.01em"><span style="font-size:0.8em;font-weight:500;color:var(--muted);margin-right:0.25em">CNY</span>20,000.00</span>
+        <span style="font-size:14px;line-height:22px;color:var(--ink2)">Arrival University, account ending 0098</span>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="font-size:20px;line-height:26px;font-weight:600">Payment journey</span><dc-import name="AG Pill" kind="uncertain" hint-size="190px,26px"></dc-import></div>
+        <div style="display:flex;flex-direction:column">
+          <sc-for list="{{ vst }}" as="s" hint-placeholder-count="6">
+            <div style="display:grid;grid-template-columns:28px minmax(0,1fr);column-gap:12px">
+              <div style="display:flex;flex-direction:column;align-items:center">
+                <span style="width:3px;height:6px;background:{{ s.up }}"></span>
+                <sc-if value="{{ s.done }}"><span style="flex:none;width:16px;height:16px;border-radius:50%;background:var(--route)"></span></sc-if>
+                <sc-if value="{{ s.unc }}"><span style="flex:none;width:20px;height:20px;border-radius:50%;border:3px dashed var(--wait);background:var(--surface)"></span></sc-if>
+                <sc-if value="{{ s.pend }}"><span style="flex:none;width:12px;height:12px;border-radius:50%;border:2px solid var(--line-strong);background:var(--surface)"></span></sc-if>
+                <span style="width:3px;flex:1;min-height:20px;background:{{ s.down }};animation:{{ s.anim }}"></span>
+              </div>
+              <div style="display:flex;justify-content:space-between;gap:10px;padding:2px 0 18px">
+                <div style="display:flex;flex-direction:column"><span style="font-size:15px;line-height:22px;font-weight:600;color:{{ s.lc }}">{{ s.label }}</span><span style="font-size:12px;line-height:16px;font-weight:500;color:{{ s.sc }}">{{ s.sub }}</span></div>
+                <sc-if value="{{ s.seal }}"><dc-import name="AG Seal" fp="b7710e2a9c4f5d63" size="32" hint-size="32px,32px"></dc-import></sc-if>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:2px;padding-top:12px;border-top:1px solid var(--line)"><span style="font-size:15px;line-height:22px;font-weight:600">A payment is already on its way</span><span style="font-size:14px;line-height:22px;color:var(--ink2)">Check that payment instead of sending another.</span></div>
+        <button style="height:44px;border:0;border-radius:8px;background:var(--route);color:var(--on-route);font-size:15px;font-weight:600;padding-top:2px">Check this payment</button>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ m3 }}">
+    <div ref="{{ scrollRef }}" style="flex:1;min-height:0;overflow:auto;padding:16px">
+      <article style="background:var(--surface);border:1px solid var(--line);border-radius:2px;padding:24px 20px;display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:12px;font-weight:500;color:var(--muted)">Plan version 1, requested Tue 20 Oct, 09:04</span><h1 style="margin:0;font-size:28px;line-height:34px;font-weight:700;letter-spacing:-0.015em">Payment approval</h1><span style="font-size:15px;line-height:24px;color:var(--ink2)">Arrival University tuition, requested by Sofía Ramos</span></div>
+        <p style="margin:0;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:28px">I approve a single tuition payment from my account ending 4821 to Arrival University's registered account, under the terms below. If the price expires, ArrivalGuard may refresh it for the same route only while the debit stays within my limit and the arrival reserve is kept.</p>
+        <dl style="margin:0;display:flex;flex-direction:column">
+          <sc-for list="{{ fields }}" as="f" hint-placeholder-count="8"><div style="display:flex;flex-direction:column;padding:8px 0;border-bottom:1px solid var(--line)"><dt style="font-size:13px;line-height:18px;font-weight:600;color:var(--ink2)">{{ f.l }}</dt><dd style="margin:0;font-size:{{ f.fs }};line-height:{{ f.lh }};font-weight:{{ f.fw }}">{{ f.v }}</dd></div></sc-for>
+        </dl>
+        <div style="display:flex;gap:16px;align-items:flex-start">
+          <div style="flex:none;width:112px;display:flex;flex-direction:column;gap:8px"><dc-import name="AG Seal" fp="3f9a21c7e04b88d1" size="96" hint-size="96px,96px"></dc-import><span style="font-family:'Overpass Mono',monospace;font-size:12px;line-height:16px">Consent fingerprint 3F9A 21C7</span></div>
+          <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:15px;line-height:22px;font-weight:600">Approved by Carlos Ramos, Tue 20 Oct, 09:07 virtual time</span><span style="font-size:13px;line-height:20px;color:var(--ink2)">This approval covers only the terms above.</span></div>
+        </div>
+        <button style="height:44px;border:1px solid var(--line-strong);border-radius:8px;background:var(--surface);color:var(--ink);font-size:15px;font-weight:600;padding-top:2px">Review or revoke</button>
+      </article>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ m4 }}">
+    <div style="flex:1;min-height:0;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><h1 style="margin:0;font-size:28px;line-height:34px;font-weight:700;letter-spacing:-0.015em">Requests</h1><span style="font-size:12px;font-weight:500;color:var(--muted)">1 waiting</span></div>
+      <div style="background:var(--surface);border:1px solid var(--line-strong);border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="font-size:15px;font-weight:600">Tuition approval</span><dc-import name="AG Pill" kind="waitC" hint-size="150px,26px"></dc-import></div>
+        <span style="font-size:13px;color:var(--ink2)">Requested by Sofía Ramos, plan version 1</span>
+        <span style="font-size:24px;line-height:30px;font-weight:600"><span style="font-size:0.8em;font-weight:500;color:var(--muted);margin-right:0.25em">USD</span>2,860.00</span>
+        <span style="font-size:14px;line-height:22px;color:var(--ink2)">Route B, Edu Pay Partner, arrives in about 24 h. University receives CNY 20,000.00.</span>
+        <span style="font-size:12px;line-height:16px;font-weight:500;color:var(--muted)">Waiting 3 min of virtual time</span>
+        <button style="height:44px;border:0;border-radius:8px;background:var(--route);color:var(--on-route);font-size:15px;font-weight:600;padding-top:2px;margin-top:4px">Review and approve</button>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column">
+        <span style="font-size:20px;line-height:26px;font-weight:600;margin-bottom:6px">Activity</span>
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr);gap:10px;padding:10px 0;border-top:1px solid var(--line);font-size:14px;line-height:22px"><span style="font-weight:600">09:04</span><span style="color:var(--ink2)">Sofía requested your approval for plan version 1.</span></div>
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr);gap:10px;padding:10px 0;border-top:1px solid var(--line);font-size:14px;line-height:22px"><span style="font-weight:600">09:02</span><span style="color:var(--ink2)">Sofía created a tuition plan. Route B, USD 2,860.00.</span></div>
+      </div>
+      <div style="background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:10px">
+        <span style="font-size:20px;line-height:26px;font-weight:600">Your limits</span>
+        <div style="display:flex;justify-content:space-between;font-size:14px;line-height:22px"><span style="color:var(--ink2)">Tuition limit</span><span style="font-weight:600">USD 2,900.00</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:14px;line-height:22px"><span style="color:var(--ink2)">Arrival reserve</span><span style="font-weight:600">USD 1,800.00</span></div>
+      </div>
+    </div>
+  </sc-if>
+
+  <div style="flex:none;height:64px;background:var(--surface);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr)">
+    <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="3">
+      <button style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border:0;background:transparent;color:{{ t.c }};border-top:2px solid {{ t.b }};margin-top:-1px"><span style="position:relative;width:20px;height:20px;background:currentColor;-webkit-mask-image:{{ t.m }};mask-image:{{ t.m }};-webkit-mask-size:contain;mask-size:contain;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center"></span><span style="display:flex;align-items:center;gap:5px;font-size:12px;font-weight:600">{{ t.t }}<sc-if value="{{ t.dot }}"><span style="width:7px;height:7px;border-radius:50%;background:var(--route)"></span></sc-if></span></button>
+    </sc-for>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390,&quot;height&quot;:844},&quot;screen&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;M1&quot;,&quot;M2&quot;,&quot;M3&quot;,&quot;M4&quot;],&quot;default&quot;:&quot;M1&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+const MI = n => `url(https://unpkg.com/lucide-static@0.469.0/icons/${n}.svg)`;
+const UNC = 'repeating-linear-gradient(180deg,var(--wait) 0 6px,transparent 6px 10px)';
+class Component extends DCLogic {
+  scrollRef = React.createRef();
+  componentDidMount() { const el = this.scrollRef.current; if (el) el.scrollTop = el.scrollHeight; }
+  componentDidUpdate() { this.componentDidMount(); }
+  renderVals() {
+    const s = this.props.screen || 'M1', carlos = s === 'M3' || s === 'M4';
+    const T = { M1: ['09:02', '+2 min'], M2: ['09:13', '+13 min'], M3: ['09:07', '+7 min'], M4: ['09:07', '+7 min'] }[s];
+    const tabsS = [['Chat', 'message-square', s === 'M1', s === 'M2'], ['Payment', 'route', s === 'M2', s === 'M1'], ['Funds', 'wallet', false, false]];
+    const tabsC = [['Requests', 'inbox', s === 'M4' || s === 'M3', false], ['Permissions', 'sliders-horizontal', false, false], ['Chat', 'message-square', false, false]];
+    const tabs = (carlos ? tabsC : tabsS).map(([t, i, a, dot]) => ({ t, m: MI(i), c: a ? 'var(--route)' : 'var(--ink2)', b: a ? 'var(--route)' : 'transparent', dot }));
+    const st = [['Planned', '09:09, ArrivalGuard', 'done'], ['Approved', '09:12, Carlos', 'done', 1], ['Sent', '09:13, ArrivalGuard', 'done'], ['Accepted', 'Checking with the provider', 'unc'], ['University', '', 'pend'], ['Credited', '', 'pend']];
+    const vst = st.map(([label, sub, k, seal], i) => {
+      const prev = i > 0 ? st[i][2] : null, next = i < st.length - 1 ? st[i + 1][2] : null;
+      const col = k => k === 'done' ? 'var(--route)' : k === 'unc' ? UNC : 'var(--line)';
+      return { label, sub, seal: !!seal, done: k === 'done', unc: k === 'unc', pend: k === 'pend', up: i === 0 ? 'transparent' : col(prev), down: next ? col(next) : 'transparent', anim: next === 'unc' ? 'agDrift 2s linear infinite' : 'none', lc: k === 'pend' ? 'var(--ink2)' : 'var(--ink)', sc: k === 'unc' ? 'var(--wait)' : 'var(--muted)' };
+    });
+    const fld = (l, v, big) => ({ l, v, fs: big ? '22px' : '16px', lh: big ? '28px' : '24px', fw: big ? '600' : '400' });
+    const fields = [fld('Purpose', 'Tuition, reference AG-STUDENT-01'), fld('Pays to', 'Arrival University, account ending 0098'), fld('University receives', 'CNY 20,000.00'), fld('Proposed debit', 'USD 2,860.00', true), fld('Your limit', 'USD 2,900.00'), fld('Left after payment', 'at least USD 1,800.00 (arrival reserve)'), fld('Route', 'B, Edu Pay Partner, arrives in about 24 h'), fld('Valid until', 'Wed 21 Oct, 09:00 virtual time')];
+    return {
+      label: { M1: 'M1 Sofía, chat', M2: 'M2 Payment, checking with the provider', M3: 'M3 Approval document, sealed', M4: "M4 Carlos's requests" }[s],
+      m1: s === 'M1', m2: s === 'M2', m3: s === 'M3', m4: s === 'M4', time: T[0], off: T[1],
+      topBorder: carlos ? 'var(--route)' : 'var(--line)', ini: carlos ? 'CR' : 'SR', who: carlos ? 'Carlos' : 'Sofía', av: carlos ? 'var(--surface)' : 'var(--route-tint)',
+      tabs, vst, fields, scrollRef: this.scrollRef
+    };
+  }
+}
+</script>
+</body>
+</html>

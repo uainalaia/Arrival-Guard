@@ -1,0 +1,245 @@
+{
+  "kind": "tasks",
+  "generatedAt": "2026-10-19T05:29:35.916Z",
+  "baseUrl": "https://arrivalguard.vercel.app",
+  "commit": "82e72e5",
+  "tasks": [
+    {
+      "id": "T1",
+      "title": "Pay tuition: the payer approves on the fixed screen; credited with a receipt",
+      "type": "moves money",
+      "passed": true,
+      "checks": [
+        {
+          "check": "route B selected for 48 h",
+          "ok": true
+        },
+        {
+          "check": "payer approval 201",
+          "ok": true
+        },
+        {
+          "check": "payment created once (201)",
+          "ok": true
+        },
+        {
+          "check": "CREDITED with a university receipt",
+          "ok": true
+        },
+        {
+          "check": "balance USD 2,140.00 (one debit)",
+          "ok": true
+        }
+      ],
+      "workspaceId": "a37a5a25-74ae-48b1-8741-f887ffc6057a",
+      "durationMs": 3540
+    },
+    {
+      "id": "T2",
+      "title": "Check status: observed state, its source and next step, never credited without a receipt",
+      "type": "executes without family debit",
+      "passed": true,
+      "checks": [
+        {
+          "check": "waiting for the university, not credited",
+          "ok": true
+        },
+        {
+          "check": "source and virtual time of the observation",
+          "ok": true
+        },
+        {
+          "check": "next step is to check this payment",
+          "ok": true
+        }
+      ],
+      "workspaceId": "3dfccd50-1350-4e98-b128-4ea21dd3b9fb",
+      "durationMs": 2482
+    },
+    {
+      "id": "T3",
+      "title": "Arrival transfer under the standing permission: delivered once, permission and reserve updated, payer notified",
+      "type": "moves money",
+      "passed": true,
+      "checks": [
+        {
+          "check": "ready within the permission (R1, USD 288.00)",
+          "ok": true
+        },
+        {
+          "check": "sent without a new approval",
+          "ok": true
+        },
+        {
+          "check": "delivered once",
+          "ok": true
+        },
+        {
+          "check": "permission used USD 288.00",
+          "ok": true
+        },
+        {
+          "check": "arrival reserve USD 1,512.00",
+          "ok": true
+        },
+        {
+          "check": "payer notified in activity",
+          "ok": true
+        }
+      ],
+      "workspaceId": "73a4b053-761c-436e-86f7-55a90ebb5d1d",
+      "durationMs": 1741
+    },
+    {
+      "id": "T4",
+      "title": "Project cash per currency: verdict with margin, conditional income apart",
+      "type": "calculates or answers",
+      "passed": true,
+      "checks": [
+        {
+          "check": "DEFICIT of USD 360.00 with expenses of USD 2,500.00",
+          "ok": true
+        },
+        {
+          "check": "scholarship shown apart, not counted",
+          "ok": true
+        }
+      ],
+      "workspaceId": "b837300a-df17-402f-9f04-c414ae3e8b29",
+      "durationMs": 1834
+    },
+    {
+      "id": "T5",
+      "title": "Compare routes: viable and discarded with reason codes, nothing created",
+      "type": "calculates or answers",
+      "passed": true,
+      "checks": [
+        {
+          "check": "A by deadline, C by net, E by receiver",
+          "ok": true
+        },
+        {
+          "check": "no plan, permission or payment created",
+          "ok": true
+        }
+      ],
+      "workspaceId": "e3125d10-91a4-499e-96da-f5faaf08bb02",
+      "durationMs": 891
+    },
+    {
+      "id": "T6",
+      "title": "Change permissions (payer only): lower the limit, the incompatible approval is invalidated",
+      "type": "executes without family debit",
+      "passed": true,
+      "checks": [
+        {
+          "check": "student cannot change the limit (403)",
+          "ok": true
+        },
+        {
+          "check": "limit lowered to USD 2,500.00",
+          "ok": true
+        },
+        {
+          "check": "approval invalidated and plan NOT_VIABLE",
+          "ok": true
+        }
+      ],
+      "workspaceId": "f9760ac9-3f67-4fda-b1f3-3454bdeb2218",
+      "durationMs": 2369
+    },
+    {
+      "id": "T7",
+      "title": "Refund request for the verified excess, fixed destination, followed until refunded",
+      "type": "executes without family debit",
+      "passed": true,
+      "checks": [
+        {
+          "check": "amount = verified excess CNY 500.00, to the paying account",
+          "ok": true
+        },
+        {
+          "check": "submitted",
+          "ok": true
+        },
+        {
+          "check": "REFUNDED with USD 70.00 to the paying account",
+          "ok": true
+        }
+      ],
+      "workspaceId": "e7039883-b56f-47d2-9927-cd82959550d6",
+      "durationMs": 1876
+    },
+    {
+      "id": "T8",
+      "title": "Out of scope: explains the limit and offers an allowed action, moves no funds",
+      "type": "calculates or answers",
+      "passed": true,
+      "checks": [
+        {
+          "check": "the assistant answered",
+          "ok": true
+        },
+        {
+          "check": "no money-moving tool used",
+          "ok": true
+        },
+        {
+          "check": "balance and reserve unchanged, no payment or transfer",
+          "ok": true
+        }
+      ],
+      "workspaceId": "bba1ecfa-c8ab-4b19-ab6d-b9b740c51f6c",
+      "durationMs": 4537
+    }
+  ],
+  "consoleRun": {
+    "workspaceId": "16c75a35-b3e1-42f3-9aa1-8378b9d1f4a1",
+    "status": 200,
+    "durationMs": 3904,
+    "passed": 8,
+    "total": 8,
+    "tasks": [
+      {
+        "id": "T1",
+        "passed": true,
+        "error": null
+      },
+      {
+        "id": "T2",
+        "passed": true,
+        "error": null
+      },
+      {
+        "id": "T3",
+        "passed": true,
+        "error": null
+      },
+      {
+        "id": "T4",
+        "passed": true,
+        "error": null
+      },
+      {
+        "id": "T5",
+        "passed": true,
+        "error": null
+      },
+      {
+        "id": "T6",
+        "passed": true,
+        "error": null
+      },
+      {
+        "id": "T7",
+        "passed": true,
+        "error": null
+      },
+      {
+        "id": "T8",
+        "passed": true,
+        "error": null
+      }
+    ]
+  }
+}

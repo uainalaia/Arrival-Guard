@@ -1,0 +1,65 @@
+{
+  "generatedAt": "2026-10-18T22:54:34.604Z",
+  "check": "phase0-ai-check",
+  "model": "claude-sonnet-5-5",
+  "config": {
+    "max_tokens": 2048,
+    "thinking": "between_tools",
+    "effort": "low",
+    "tool_choice": "auto",
+    "strictTools": true
+  },
+  "calls": [
+    {
+      "id": "msg_011CgAXSxmtyAYMo3jrsWDzd",
+      "model": "claude-sonnet-5-5",
+      "stop_reason": "tool_use",
+      "blocks": [
+        "text",
+        "tool_use:get_case_overview"
+      ],
+      "usage": {
+        "input_tokens": 487,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 38,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "speed": "standard"
+      }
+    },
+    {
+      "id": "msg_011CgAXT7oNS6hRxxHRGhTeK",
+      "model": "claude-sonnet-5-5",
+      "stop_reason": "end_turn",
+      "blocks": [
+        "text"
+      ],
+      "usage": {
+        "input_tokens": 591,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 160,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "speed": "standard"
+      }
+    }
+  ],
+  "finalText": "Here's what the case shows (simulated data):\n\n-   **Reference:** AG-STUDENT-01\n-   **Tuition due (net):** CNY 20,000.00 (2,000,000 minor units)\n-   **Due in:** 48 hours, which is about **Thu 22 Oct, 09:00** based on the current time (Tue 20 Oct, 09:00)\n\nThe case doesn't say whether any payment has been made or which payment methods are available. I can't confirm either from this data.",
+  "ok": true
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><style>body{margin:0;--seal:#D2412B}@keyframes agStamp{from{opacity:0;transform:scale(1.06) rotate(-2deg)}to{opacity:1;transform:none}}@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}</style></helmet>
+<svg width="{{ size }}" height="{{ size }}" viewBox="0 0 96 96" style="display:block;flex:none;overflow:visible;transform-origin:50% 50%;animation:{{ anim }}"><defs><filter id="agInkS" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="7" result="n"></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="0.9" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap></filter></defs><g style="filter:{{ filt }}"><rect x="2" y="2" width="92" height="92" rx="6" style="fill:none;stroke:var(--seal);stroke-width:{{ sw }}"></rect><path d="{{ d }}" style="fill:none;stroke:var(--seal);stroke-width:{{ gw }};stroke-linecap:round;stroke-linejoin:round"></path></g></svg>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:120,&quot;height&quot;:120},&quot;fp&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;3f9a21c7e04b88d1&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;size&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:96,&quot;tsType&quot;:&quot;number&quot;},&quot;animate&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const fp = String(this.props.fp || '3f9a21c7e04b88d1').toLowerCase().replace(/[^0-9a-f]/g, '');
+    const size = +(this.props.size || 96);
+    const cell = (d, x, y) => {
+      const g = d >> 2, r = d % 4, cx = x + 8, cy = y + 8, c = [1, 0, -1, 0][r], s = [0, 1, 0, -1][r];
+      const P = (px, py) => { const dx = x + px - cx, dy = y + py - cy; return `${+(cx + dx * c - dy * s).toFixed(2)} ${+(cy + dx * s + dy * c).toFixed(2)}`; };
+      if (g === 0) return `M${P(3, 8)} L${P(13, 8)}`;
+      if (g === 1) return `M${P(3, 3)} L${P(3, 13)} L${P(13, 13)}`;
+      if (g === 2) return `M${P(5, 8)} l0.01 0 M${P(11, 8)} l0.01 0`;
+      return `M${P(8, 4)} L${P(8, 12)} M${P(4, 8)} L${P(12, 8)}`;
+    };
+    const d = fp.slice(0, 16).split('').map((h, i) => cell(parseInt(h, 16), 12 + (i % 4) * 18, 12 + Math.floor(i / 4) * 18)).join(' ');
+    const small = size < 64;
+    const a = this.props.animate;
+    return { d, size, sw: small ? 5 : 4, gw: small ? 4.2 : 3.5, filt: size >= 96 ? 'url(#agInkS)' : 'none', anim: a && a !== 'false' ? 'agStamp 320ms cubic-bezier(.2,.7,.2,1) both' : 'none' };
+  }
+}
+</script>
+</body>
+</html>

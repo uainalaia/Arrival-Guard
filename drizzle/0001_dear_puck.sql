@@ -1,0 +1,2 @@
+ALTER TABLE "payment_attempts" ADD COLUMN "submit_lease_until" timestamp with time zone;--> statement-breakpoint
+CREATE UNIQUE INDEX "sim_institution_ledger_transfer_uq" ON "sim_institution_ledger" USING btree ("workspace_id","transfer_id") WHERE "sim_institution_ledger"."transfer_id" is not null;

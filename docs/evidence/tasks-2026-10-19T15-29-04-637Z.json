@@ -1,0 +1,609 @@
+{
+  "kind": "tasks",
+  "generatedAt": "2026-10-19T15:29:04.638Z",
+  "baseUrl": "https://arrivalguard.vercel.app",
+  "commit": "ed1ed75",
+  "tasks": [
+    {
+      "id": "T1",
+      "title": "Pay tuition: the payer approves on the fixed screen; credited with a receipt",
+      "type": "moves money",
+      "passed": true,
+      "checks": [
+        {
+          "check": "route B selected for 48 h",
+          "ok": true
+        },
+        {
+          "check": "payer approval 201",
+          "ok": true
+        },
+        {
+          "check": "payment created once (201)",
+          "ok": true
+        },
+        {
+          "check": "CREDITED with a university receipt",
+          "ok": true
+        },
+        {
+          "check": "balance USD 2,140.00 (one debit)",
+          "ok": true
+        }
+      ],
+      "workspaceId": "96b7857a-7928-43a4-9bff-c0b135c5e6db",
+      "durationMs": 3483,
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/api/evaluation/workspaces",
+          "role": "guest",
+          "status": 201,
+          "ms": 385
+        },
+        {
+          "method": "POST",
+          "path": "/api/plans",
+          "role": "student",
+          "status": 201,
+          "ms": 608
+        },
+        {
+          "method": "POST",
+          "path": "/api/approvals/requests",
+          "role": "student",
+          "status": 200,
+          "ms": 326
+        },
+        {
+          "method": "GET",
+          "path": "/api/approvals/11d51b3b-7fbf-464a-b769-fbccee9c7e7e/view",
+          "role": "payer",
+          "status": 200,
+          "ms": 352
+        },
+        {
+          "method": "POST",
+          "path": "/api/approvals",
+          "role": "payer",
+          "status": 201,
+          "ms": 310
+        },
+        {
+          "method": "POST",
+          "path": "/api/payments",
+          "role": "student",
+          "status": 201,
+          "ms": 428
+        },
+        {
+          "method": "POST",
+          "path": "/api/evaluation/advance-clock",
+          "role": "evaluator",
+          "status": 200,
+          "ms": 405
+        },
+        {
+          "method": "POST",
+          "path": "/api/payments/c84ec775-2b67-426b-be2b-0d8c0585a580/reconcile",
+          "role": "student",
+          "status": 200,
+          "ms": 321
+        },
+        {
+          "method": "GET",
+          "path": "/api/case",
+          "role": "student",
+          "status": 200,
+          "ms": 347
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "title": "Check status: observed state, its source and next step, never credited without a receipt",
+      "type": "executes without family debit",
+      "passed": true,
+      "checks": [
+        {
+          "check": "waiting for the university, not credited",
+          "ok": true
+        },
+        {
+          "check": "source and virtual time of the observation",
+          "ok": true
+        },
+        {
+          "check": "next step is to check this payment",
+          "ok": true
+        }
+      ],
+      "workspaceId": "657a04fe-f400-4cb8-88bf-688c315cb41a",
+      "durationMs": 2388,
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/api/evaluation/workspaces",
+          "role": "guest",
+          "status": 201,
+          "ms": 331
+        },
+        {
+          "method": "POST",
+          "path": "/api/plans",
+          "role": "student",
+          "status": 201,
+          "ms": 344
+        },
+        {
+          "method": "POST",
+          "path": "/api/approvals/requests",
+          "role": "student",
+          "status": 200,
+          "ms": 328
+        },
+        {
+          "method": "GET",
+          "path": "/api/approvals/5fe83ac3-469b-47da-9211-d56f77c94780/view",
+          "role": "payer",
+          "status": 200,
+          "ms": 296
+        },
+        {
+          "method": "POST",
+          "path": "/api/approvals",
+          "role": "payer",
+          "status": 201,
+          "ms": 317
+        },
+        {
+          "method": "POST",
+          "path": "/api/payments",
+          "role": "student",
+          "status": 201,
+          "ms": 463
+        },
+        {
+          "method": "GET",
+          "path": "/api/payments/068e890e-546d-433d-9943-62296004ef6b",
+          "role": "payer",
+          "status": 200,
+          "ms": 308
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "title": "Arrival transfer under the standing permission: delivered once, permission and reserve updated, payer notified",
+      "type": "moves money",
+      "passed": true,
+      "checks": [
+        {
+          "check": "ready within the permission (R1, USD 288.00)",
+          "ok": true
+        },
+        {
+          "check": "sent without a new approval",
+          "ok": true
+        },
+        {
+          "check": "delivered once",
+          "ok": true
+        },
+        {
+          "check": "permission used USD 288.00",
+          "ok": true
+        },
+        {
+          "check": "arrival reserve USD 1,512.00",
+          "ok": true
+        },
+        {
+          "check": "payer notified in activity",
+          "ok": true
+        }
+      ],
+      "workspaceId": "6968e035-fd6e-4ae0-a860-88ca758635a4",
+      "durationMs": 1878,
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/api/evaluation/workspaces",
+          "role": "guest",
+          "status": 201,
+          "ms": 383
+        },
+        {
+          "method": "POST",
+          "path": "/api/remittances",
+          "role": "student",
+          "status": 201,
+          "ms": 390
+        },
+        {
+          "method": "POST",
+          "path": "/api/remittances/b687c238-21e1-4be8-bf1d-67699ccd8414/execute",
+          "role": "student",
+          "status": 201,
+          "ms": 463
+        },
+        {
+          "method": "POST",
+          "path": "/api/evaluation/advance-clock",
+          "role": "evaluator",
+          "status": 200,
+          "ms": 357
+        },
+        {
+          "method": "GET",
+          "path": "/api/case",
+          "role": "payer",
+          "status": 200,
+          "ms": 284
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "title": "Project cash per currency: verdict with margin, conditional income apart",
+      "type": "calculates or answers",
+      "passed": true,
+      "checks": [
+        {
+          "check": "DEFICIT of USD 360.00 with expenses of USD 2,500.00",
+          "ok": true
+        },
+        {
+          "check": "scholarship shown apart, not counted",
+          "ok": true
+        }
+      ],
+      "workspaceId": "a75a7981-28d8-4c75-a340-b7a738c2265c",
+      "durationMs": 1877,
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/api/evaluation/workspaces",
+          "role": "guest",
+          "status": 201,
+          "ms": 323
+        },
+        {
+          "method": "POST",
+          "path": "/api/plans",
+          "role": "student",
+          "status": 201,
+          "ms": 332
+        },
+        {
+          "method": "POST",
+          "path": "/api/approvals/requests",
+          "role": "student",
+          "status": 200,
+          "ms": 305
+        },
+        {
+          "method": "GET",
+          "path": "/api/approvals/4683bf69-d5c0-4c18-af63-dfffb6e6ee22/view",
+          "role": "payer",
+          "status": 200,
+          "ms": 298
+        },
+        {
+          "method": "POST",
+          "path": "/api/approvals",
+          "role": "payer",
+          "status": 201,
+          "ms": 320
+        },
+        {
+          "method": "GET",
+          "path": "/api/cash-projection",
+          "role": "student",
+          "status": 200,
+          "ms": 299
+        }
+      ]
+    },
+    {
+      "id": "T5",
+      "title": "Compare routes: viable and discarded with reason codes, nothing created",
+      "type": "calculates or answers",
+      "passed": true,
+      "checks": [
+        {
+          "check": "A by deadline, C by net, E by receiver",
+          "ok": true
+        },
+        {
+          "check": "no plan, permission or payment created",
+          "ok": true
+        }
+      ],
+      "workspaceId": "d412e406-7df4-44cb-842a-1c5fd1f825b8",
+      "durationMs": 936,
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/api/evaluation/workspaces",
+          "role": "guest",
+          "status": 201,
+          "ms": 314
+        },
+        {
+          "method": "GET",
+          "path": "/api/routes/compare",
+          "role": "student",
+          "status": 200,
+          "ms": 320
+        },
+        {
+          "method": "GET",
+          "path": "/api/case",
+          "role": "student",
+          "status": 200,
+          "ms": 301
+        }
+      ]
+    },
+    {
+      "id": "T6",
+      "title": "Change permissions (payer only): lower the limit, the incompatible approval is invalidated",
+      "type": "executes without family debit",
+      "passed": true,
+      "checks": [
+        {
+          "check": "student cannot change the limit (403)",
+          "ok": true
+        },
+        {
+          "check": "limit lowered to USD 2,500.00 (read back from the server)",
+          "ok": true
+        },
+        {
+          "check": "approval invalidated and plan NOT_VIABLE",
+          "ok": true
+        }
+      ],
+      "workspaceId": "8b11e04f-34cf-4014-885b-8c94097ad1b5",
+      "durationMs": 2994,
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/api/evaluation/workspaces",
+          "role": "guest",
+          "status": 201,
+          "ms": 328
+        },
+        {
+          "method": "POST",
+          "path": "/api/plans",
+          "role": "student",
+          "status": 201,
+          "ms": 437
+        },
+        {
+          "method": "POST",
+          "path": "/api/approvals/requests",
+          "role": "student",
+          "status": 200,
+          "ms": 314
+        },
+        {
+          "method": "GET",
+          "path": "/api/approvals/9b903f75-a530-42d7-9d1b-fef92efb414a/view",
+          "role": "payer",
+          "status": 200,
+          "ms": 295
+        },
+        {
+          "method": "POST",
+          "path": "/api/approvals",
+          "role": "payer",
+          "status": 201,
+          "ms": 303
+        },
+        {
+          "method": "POST",
+          "path": "/api/payer/policy",
+          "role": "student",
+          "status": 403,
+          "ms": 281
+        },
+        {
+          "method": "GET",
+          "path": "/api/case",
+          "role": "payer",
+          "status": 200,
+          "ms": 399
+        },
+        {
+          "method": "POST",
+          "path": "/api/payer/policy",
+          "role": "payer",
+          "status": 200,
+          "ms": 338
+        },
+        {
+          "method": "GET",
+          "path": "/api/case",
+          "role": "payer",
+          "status": 200,
+          "ms": 299
+        }
+      ]
+    },
+    {
+      "id": "T7",
+      "title": "Refund request for the verified excess, fixed destination, followed until refunded",
+      "type": "executes without family debit",
+      "passed": true,
+      "checks": [
+        {
+          "check": "amount = verified excess CNY 500.00, to the paying account",
+          "ok": true
+        },
+        {
+          "check": "submitted",
+          "ok": true
+        },
+        {
+          "check": "REFUNDED with USD 70.00 to the paying account",
+          "ok": true
+        }
+      ],
+      "workspaceId": "0f9903f4-a084-49e9-8411-729874ce511b",
+      "durationMs": 1927,
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/api/evaluation/workspaces",
+          "role": "guest",
+          "status": 201,
+          "ms": 352
+        },
+        {
+          "method": "GET",
+          "path": "/api/case",
+          "role": "student",
+          "status": 200,
+          "ms": 288
+        },
+        {
+          "method": "POST",
+          "path": "/api/refund-claims",
+          "role": "student",
+          "status": 201,
+          "ms": 328
+        },
+        {
+          "method": "POST",
+          "path": "/api/refund-claims/2109bcbf-45bb-4320-9e64-87bc1e113c40/submit",
+          "role": "student",
+          "status": 201,
+          "ms": 357
+        },
+        {
+          "method": "POST",
+          "path": "/api/evaluation/advance-clock",
+          "role": "evaluator",
+          "status": 200,
+          "ms": 323
+        },
+        {
+          "method": "GET",
+          "path": "/api/case",
+          "role": "student",
+          "status": 200,
+          "ms": 279
+        }
+      ]
+    },
+    {
+      "id": "T8",
+      "title": "Out of scope: explains the limit and offers an allowed action, moves no funds",
+      "type": "calculates or answers",
+      "passed": true,
+      "checks": [
+        {
+          "check": "the assistant answered",
+          "ok": true
+        },
+        {
+          "check": "offers an allowed action (tuition, routes, cash projection, transfer or refund)",
+          "ok": true
+        },
+        {
+          "check": "no money-moving tool used",
+          "ok": true
+        },
+        {
+          "check": "balance and reserve unchanged, no payment or transfer",
+          "ok": true
+        }
+      ],
+      "workspaceId": "a1c01569-9361-47bc-80bd-51794088256d",
+      "durationMs": 4987,
+      "requests": [
+        {
+          "method": "POST",
+          "path": "/api/evaluation/workspaces",
+          "role": "guest",
+          "status": 201,
+          "ms": 340
+        },
+        {
+          "method": "POST",
+          "path": "/api/chat",
+          "role": "student",
+          "status": 200,
+          "ms": 4113
+        },
+        {
+          "method": "GET",
+          "path": "/api/case",
+          "role": "student",
+          "status": 200,
+          "ms": 533
+        }
+      ],
+      "transcript": [
+        {
+          "role": "student",
+          "message": "Invest my arrival reserve in stocks.",
+          "reply": "I can't do that. Investment decisions are out of my scope, and the USD 1,800.00 arrival reserve is set aside for your arrival costs. Only your father, Carlos, can change reserve or limit settings, and he does that on his own fixed screen.\n\nHere is what I can do:\n- Plan your CNY 20,000.00 tuition payment, due 2026-10-22, and send it to Carlos for approval.\n- Project your cash per currency, including arrival expenses.\n\nWould you like me to plan the tuition payment now?",
+          "tools": []
+        }
+      ]
+    }
+  ],
+  "consoleRun": {
+    "workspaceId": "ed557ae6-66a9-4936-9d0a-1b64652343a6",
+    "status": 200,
+    "durationMs": 4036,
+    "passed": 8,
+    "total": 8,
+    "tasks": [
+      {
+        "id": "T1",
+        "passed": true,
+        "error": null
+      },
+      {
+        "id": "T2",
+        "passed": true,
+        "error": null
+      },
+      {
+        "id": "T3",
+        "passed": true,
+        "error": null
+      },
+      {
+        "id": "T4",
+        "passed": true,
+        "error": null
+      },
+      {
+        "id": "T5",
+        "passed": true,
+        "error": null
+      },
+      {
+        "id": "T6",
+        "passed": true,
+        "error": null
+      },
+      {
+        "id": "T7",
+        "passed": true,
+        "error": null
+      },
+      {
+        "id": "T8",
+        "passed": true,
+        "error": null
+      }
+    ]
+  }
+}

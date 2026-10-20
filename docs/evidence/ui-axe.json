@@ -1,0 +1,279 @@
+{
+  "generatedAt": "2026-10-20T01:44:31.082Z",
+  "baseUrl": "http://localhost:3000",
+  "screens": [
+    {
+      "screen": "landing-1440-light",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "landing-1440-dark",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "landing-390-light",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "landing-390-dark",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "system-1440-light",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "system-1440-dark",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "system-390-light",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "system-390-dark",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "student-empty-1440-light",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "student-empty-1440-dark",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "student-empty-390-light",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "student-empty-390-dark",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "student-waiting-1440-light",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "student-waiting-1440-dark",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "student-waiting-390-light",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "student-waiting-390-dark",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "approval-pending-1440-light",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "approval-pending-1440-dark",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "approval-pending-390-light",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "approval-pending-390-dark",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "approval-approved-1440-light",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "approval-approved-1440-dark",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "approval-approved-390-light",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "approval-approved-390-dark",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "payer-1440-light",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "payer-1440-dark",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "payer-390-light",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "payer-390-dark",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "console-1440-dark",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "console-390-dark",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "console-scripted-tasks-desktop-dark",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "student-credited-1440-light",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "student-credited-1440-dark",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "student-credited-390-light",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "student-credited-390-dark",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "student-transfer-1440-light",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "student-transfer-1440-dark",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "student-transfer-390-light",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    },
+    {
+      "screen": "student-transfer-390-dark",
+      "horizontalOverflowPx": 0,
+      "serious": 0,
+      "critical": 0,
+      "ids": []
+    }
+  ]
+}

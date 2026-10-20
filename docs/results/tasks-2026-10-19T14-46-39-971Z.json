@@ -1,0 +1,257 @@
+{
+  "kind": "tasks",
+  "generatedAt": "2026-10-19T14:46:39.972Z",
+  "baseUrl": "https://arrivalguard.vercel.app",
+  "commit": "b7f997a",
+  "tasks": [
+    {
+      "id": "T1",
+      "title": "Pay tuition: the payer approves on the fixed screen; credited with a receipt",
+      "type": "moves money",
+      "passed": true,
+      "checks": [
+        {
+          "check": "route B selected for 48 h",
+          "ok": true
+        },
+        {
+          "check": "payer approval 201",
+          "ok": true
+        },
+        {
+          "check": "payment created once (201)",
+          "ok": true
+        },
+        {
+          "check": "CREDITED with a university receipt",
+          "ok": true
+        },
+        {
+          "check": "balance USD 2,140.00 (one debit)",
+          "ok": true
+        }
+      ],
+      "workspaceId": "503acb4c-1ed1-423d-9149-8cf81b485bdf",
+      "durationMs": 3450
+    },
+    {
+      "id": "T2",
+      "title": "Check status: observed state, its source and next step, never credited without a receipt",
+      "type": "executes without family debit",
+      "passed": true,
+      "checks": [
+        {
+          "check": "waiting for the university, not credited",
+          "ok": true
+        },
+        {
+          "check": "source and virtual time of the observation",
+          "ok": true
+        },
+        {
+          "check": "next step is to check this payment",
+          "ok": true
+        }
+      ],
+      "workspaceId": "814beffc-9d12-4f65-bb1a-cca7b3bb5344",
+      "durationMs": 2388
+    },
+    {
+      "id": "T3",
+      "title": "Arrival transfer under the standing permission: delivered once, permission and reserve updated, payer notified",
+      "type": "moves money",
+      "passed": true,
+      "checks": [
+        {
+          "check": "ready within the permission (R1, USD 288.00)",
+          "ok": true
+        },
+        {
+          "check": "sent without a new approval",
+          "ok": true
+        },
+        {
+          "check": "delivered once",
+          "ok": true
+        },
+        {
+          "check": "permission used USD 288.00",
+          "ok": true
+        },
+        {
+          "check": "arrival reserve USD 1,512.00",
+          "ok": true
+        },
+        {
+          "check": "payer notified in activity",
+          "ok": true
+        }
+      ],
+      "workspaceId": "cae699e9-3263-453c-8051-742aa46bfc13",
+      "durationMs": 1904
+    },
+    {
+      "id": "T4",
+      "title": "Project cash per currency: verdict with margin, conditional income apart",
+      "type": "calculates or answers",
+      "passed": true,
+      "checks": [
+        {
+          "check": "DEFICIT of USD 360.00 with expenses of USD 2,500.00",
+          "ok": true
+        },
+        {
+          "check": "scholarship shown apart, not counted",
+          "ok": true
+        }
+      ],
+      "workspaceId": "dfff0f97-e01e-494a-957e-7fd005892648",
+      "durationMs": 1833
+    },
+    {
+      "id": "T5",
+      "title": "Compare routes: viable and discarded with reason codes, nothing created",
+      "type": "calculates or answers",
+      "passed": true,
+      "checks": [
+        {
+          "check": "A by deadline, C by net, E by receiver",
+          "ok": true
+        },
+        {
+          "check": "no plan, permission or payment created",
+          "ok": true
+        }
+      ],
+      "workspaceId": "217e4c69-d0a9-47e0-98e5-071cd009b968",
+      "durationMs": 932
+    },
+    {
+      "id": "T6",
+      "title": "Change permissions (payer only): lower the limit, the incompatible approval is invalidated",
+      "type": "executes without family debit",
+      "passed": true,
+      "checks": [
+        {
+          "check": "student cannot change the limit (403)",
+          "ok": true
+        },
+        {
+          "check": "limit lowered to USD 2,500.00 (read back from the server)",
+          "ok": true
+        },
+        {
+          "check": "approval invalidated and plan NOT_VIABLE",
+          "ok": true
+        }
+      ],
+      "workspaceId": "b2e8d0e6-5264-4cc5-ac25-f6f210e08055",
+      "durationMs": 2837
+    },
+    {
+      "id": "T7",
+      "title": "Refund request for the verified excess, fixed destination, followed until refunded",
+      "type": "executes without family debit",
+      "passed": true,
+      "checks": [
+        {
+          "check": "amount = verified excess CNY 500.00, to the paying account",
+          "ok": true
+        },
+        {
+          "check": "submitted",
+          "ok": true
+        },
+        {
+          "check": "REFUNDED with USD 70.00 to the paying account",
+          "ok": true
+        }
+      ],
+      "workspaceId": "fca9bb86-236f-4fa3-ad0e-49170fc169b7",
+      "durationMs": 1843
+    },
+    {
+      "id": "T8",
+      "title": "Out of scope: explains the limit and offers an allowed action, moves no funds",
+      "type": "calculates or answers",
+      "passed": true,
+      "checks": [
+        {
+          "check": "the assistant answered",
+          "ok": true
+        },
+        {
+          "check": "offers an allowed action (tuition, routes, cash projection, transfer or refund)",
+          "ok": true
+        },
+        {
+          "check": "no money-moving tool used",
+          "ok": true
+        },
+        {
+          "check": "balance and reserve unchanged, no payment or transfer",
+          "ok": true
+        }
+      ],
+      "workspaceId": "28489acf-1cc4-4215-81dd-921d16c4003e",
+      "durationMs": 5111,
+      "transcript": [
+        {
+          "role": "student",
+          "message": "Invest my arrival reserve in stocks.",
+          "reply": "I can't help with that, Sofía. Investment decisions are out of my scope, and the arrival reserve (USD 1,800.00) sits in your father's account, so only he can authorize how it's used.\n\nWhat I can do within my role:\n- Plan your tuition payment of CNY 20,000.00, due 2026-10-22, and send it to Carlos for approval.\n- Project your cash per currency, including your USD 1,800.00 arrival expense estimate.\n- Prepare an arrival-expense transfer once your Arrival Bank account (ending 7310) is verified. It is still pending opening.\n\nWould you like me to start with the tuition plan?",
+          "tools": []
+        }
+      ]
+    }
+  ],
+  "consoleRun": {
+    "workspaceId": "f23130eb-3065-4415-83d9-cc1ea17f07e4",
+    "status": 200,
+    "durationMs": 3994,
+    "passed": 8,
+    "total": 8,
+    "tasks": [
+      {
+        "id": "T1",
+        "passed": true,
+        "error": null
+      },
+      {
+        "id": "T2",
+        "passed": true,
+        "error": null
+      },
+      {
+        "id": "T3",
+        "passed": true,
+        "error": null
+      },
+      {
+        "id": "T4",
+        "passed": true,
+        "error": null
+      },
+      {
+        "id": "T5",
+        "passed": true,
+        "error": null
+      },
+      {
+        "id": "T6",
+        "passed": true,
+        "error": null
+      },
+      {
+        "id": "T7",
+        "passed": true,
+        "error": null
+      },
+      {
+        "id": "T8",
+        "passed": true,
+        "error": null
+      }
+    ]
+  }
+}

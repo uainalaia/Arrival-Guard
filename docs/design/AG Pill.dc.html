@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><style>body{margin:0;--paper:#F1F3F2;--surface:#FFFFFF;--ink:#172231;--ink2:#4A5566;--muted:#646D79;--line:#D5DAD7;--line-strong:#7D8794;--route:#2346C8;--route-tint:#E8EDFB;--arrive:#12734F;--arrive-tint:#E3F2EB;--wait:#9A5B00;--wait-tint:#FBF0DC;--stop:#A8172B;--stop-tint:#FBE7EA;--seal:#D2412B}</style></helmet>
+<span style="display:inline-flex;align-items:center;gap:6px;height:26px;padding:1px 10px 0 8px;border-radius:999px;font-family:Overpass,system-ui,sans-serif;font-size:13px;font-weight:600;line-height:1;white-space:nowrap;color:{{ fg }};background:{{ bg }};box-shadow:{{ ring }}"><sc-if value="{{ m }}"><span style="width:14px;height:14px;flex:none;margin-top:-1px;background:currentColor;-webkit-mask-image:{{ m }};mask-image:{{ m }};-webkit-mask-size:contain;mask-size:contain;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center"></span></sc-if><sc-if value="{{ seal }}"><svg width="14" height="14" viewBox="0 0 14 14" style="flex:none;margin-top:-1px"><rect x="1" y="1" width="12" height="12" rx="2" style="fill:none;stroke:var(--seal);stroke-width:1.6"></rect><rect x="4" y="4" width="2.2" height="2.2" style="fill:var(--seal)"></rect><rect x="7.8" y="4" width="2.2" height="2.2" style="fill:var(--seal)"></rect><rect x="4" y="7.8" width="2.2" height="2.2" style="fill:var(--seal)"></rect><rect x="7.8" y="7.8" width="2.2" height="2.2" style="fill:var(--seal)"></rect></svg></sc-if><sc-if value="{{ oct }}"><svg width="14" height="14" viewBox="0 0 24 24" style="flex:none;margin-top:-1px"><polygon points="7.5,2 16.5,2 22,7.5 22,16.5 16.5,22 7.5,22 2,16.5 2,7.5" style="fill:none;stroke:currentColor;stroke-width:2.4;stroke-linejoin:round"></polygon><line x1="8" y1="12" x2="16" y2="12" style="stroke:currentColor;stroke-width:2.4;stroke-linecap:round"></line></svg></sc-if>{{ t }}</span>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:260,&quot;height&quot;:40},&quot;kind&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;details&quot;,&quot;plan&quot;,&quot;waitC&quot;,&quot;approved&quot;,&quot;sending&quot;,&quot;uncertain&quot;,&quot;accepted&quot;,&quot;waitU&quot;,&quot;credited&quot;,&quot;delivered&quot;,&quot;blocked&quot;,&quot;failed&quot;,&quot;refReq&quot;,&quot;refRev&quot;,&quot;refunded&quot;,&quot;refDecl&quot;,&quot;selected&quot;,&quot;stale&quot;],&quot;default&quot;:&quot;plan&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;label&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+const M = n => `url(https://unpkg.com/lucide-static@0.469.0/icons/${n}.svg)`;
+const R = ['var(--route)', 'var(--route-tint)'], W = ['var(--wait)', 'var(--wait-tint)'], A = ['var(--arrive)', 'var(--arrive-tint)'], S = ['var(--stop)', 'var(--stop-tint)'], N = ['var(--ink2)', 'var(--paper)'];
+const K = {
+  details: ['Details needed', N, 'circle-dashed'], plan: ['Plan ready', R, 'route'], waitC: ['Waiting for Carlos', W, 'hourglass'],
+  approved: ['Approved', R, '@seal'], sending: ['Sending', R, 'send'], uncertain: ['Checking with the provider', W, 'refresh-cw'],
+  accepted: ['Accepted by provider', R, 'check-check'], waitU: ['Waiting for the university', W, 'landmark'],
+  credited: ['Credited by the university', A, 'badge-check'], delivered: ['Delivered', A, 'badge-check'], blocked: ['Blocked', S, '@oct'],
+  failed: ['Failed, no money left the account', N, 'circle-slash'], refReq: ['Refund requested', R, 'undo-2'], refRev: ['Under review', W, 'hourglass'],
+  refunded: ['Refunded', A, 'badge-check'], refDecl: ['Refund declined', S, '@oct'], selected: ['Selected', R, 'route'], stale: ['No longer matches', N, 'circle-slash']
+};
+class Component extends DCLogic {
+  renderVals() {
+    const k = K[this.props.kind] || K.details, ic = k[2];
+    return { t: this.props.label || k[0], fg: k[1][0], bg: k[1][1], m: ic[0] === '@' ? null : M(ic), seal: ic === '@seal', oct: ic === '@oct', ring: k[1] === N ? 'inset 0 0 0 1px var(--line)' : 'none' };
+  }
+}
+</script>
+</body>
+</html>

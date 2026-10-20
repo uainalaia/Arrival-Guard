@@ -1,0 +1,27 @@
+# Dependencias y build
+node_modules/
+.next/
+out/
+coverage/
+*.tsbuildinfo
+
+# Entorno y secretos (nunca al repositorio)
+.env
+.env*.local
+.env.production
+.env.development
+!.env.example
+
+# Herramientas locales
+.vercel/
+.claude/settings.local.json
+tmp/
+test-results/
+playwright-report/
+*.log
+
+# Documentos personales de la inscripción: no van en esta carpeta
+inscripcion/
+
+# Generado por Next.js (next typegen / next build)
+next-env.d.ts
