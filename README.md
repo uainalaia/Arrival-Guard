@@ -5,7 +5,7 @@ It also sends arrival-expense transfers under a standing permission and files re
 Everything runs in a **simulated** environment: synthetic funds, a fictional university and a simulated payment provider. No real money moves.
 
 - **Live demo:** https://arrivalguard.vercel.app
-- **Evaluation code:** `<EVAL_ACCESS_CODE>` (provided in the judging packet)
+- **Evaluation code:** `<AG-VN9W-ANP5-MXEU>` (provided in the judging packet)
 - **Guide for judges:** [docs/DEMO_GUIDE.md](docs/DEMO_GUIDE.md)
 
 FinTechathon 2026, International Track.
